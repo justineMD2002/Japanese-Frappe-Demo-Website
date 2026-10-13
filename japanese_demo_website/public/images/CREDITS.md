@@ -20,3 +20,5 @@ Regenerate the WebP files with `scripts/optimize_images.sh <dir of <name>.jpg>`.
 | `news-holiday-*.webp` | rawpixel | CC0 | https://www.rawpixel.com/image/5907555/image-background-aesthetic-xmas |
 | `news-seminar-*.webp` | stocksnap / Direct Media | CC0 | https://stocksnap.io/photo/business-team-W6PNBNYHM6 |
 | `news-fallback-*.webp` | stocksnap / Lauren Mancke | CC0 | https://stocksnap.io/photo/macbook-laptop-F7OLW2SG0C |
+
+`brand/` holds Pixelcare Consulting Corporation's own logo (trimmed and resized from the company website assets). It is not CC0 and is not covered by the note above.

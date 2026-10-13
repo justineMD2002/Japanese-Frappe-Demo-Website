@@ -52,7 +52,11 @@ def site_services() -> list[dict]:
 
 
 def site_image(name: str, width: int = 960) -> str:
-	return f"{IMAGE_BASE}/{name}-{width}.webp"
+	return site_image_path(f"{name}-{width}.webp")
+
+
+def site_image_path(filename: str) -> str:
+	return f"{IMAGE_BASE}/{filename}"
 
 
 def site_image_srcset(name: str) -> str:

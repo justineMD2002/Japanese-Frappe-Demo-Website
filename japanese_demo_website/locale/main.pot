@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Japanese Demo Website VERSION\n"
 "Report-Msgid-Bugs-To: tech@pixelcareconsulting.com\n"
-"POT-Creation-Date: 2026-10-13 08:13+0000\n"
-"PO-Revision-Date: 2026-10-13 08:13+0000\n"
+"POT-Creation-Date: 2026-10-13 08:22+0000\n"
+"PO-Revision-Date: 2026-10-13 08:22+0000\n"
 "Last-Translator: tech@pixelcareconsulting.com\n"
 "Language-Team: tech@pixelcareconsulting.com\n"
 "MIME-Version: 1.0\n"
@@ -68,8 +68,8 @@ msgstr ""
 msgid "Announcements, press releases and events from Pixelcare Consulting."
 msgstr ""
 
-#: japanese_demo_website/templates/includes/footer.html:23
-#: japanese_demo_website/templates/site_base.html:40
+#: japanese_demo_website/templates/includes/footer.html:24
+#: japanese_demo_website/templates/site_base.html:42
 msgid "Auto"
 msgstr ""
 
@@ -126,11 +126,6 @@ msgstr ""
 msgid "Company profile and office of Pixelcare Consulting Corporation."
 msgstr ""
 
-#: japanese_demo_website/templates/includes/header.html:7
-#: japanese_demo_website/templates/site_base.html:35
-msgid "Consulting"
-msgstr ""
-
 #. Label of the section_contact (Section Break) field in DocType 'Inquiry'
 #: japanese_demo_website/constants.py:18
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
@@ -173,8 +168,8 @@ msgstr ""
 msgid "Customer and supplier portals"
 msgstr ""
 
-#: japanese_demo_website/templates/includes/footer.html:23
-#: japanese_demo_website/templates/site_base.html:40
+#: japanese_demo_website/templates/includes/footer.html:24
+#: japanese_demo_website/templates/site_base.html:42
 msgid "Dark"
 msgstr ""
 
@@ -182,8 +177,8 @@ msgstr ""
 msgid "Data migration from spreadsheets and older systems"
 msgstr ""
 
-#: japanese_demo_website/templates/includes/footer.html:22
-#: japanese_demo_website/templates/site_base.html:40
+#: japanese_demo_website/templates/includes/footer.html:23
+#: japanese_demo_website/templates/site_base.html:42
 msgid "Display mode"
 msgstr ""
 
@@ -247,8 +242,8 @@ msgstr ""
 msgid "Filter by category"
 msgstr ""
 
-#: japanese_demo_website/templates/includes/footer.html:12
-#: japanese_demo_website/templates/site_base.html:40
+#: japanese_demo_website/templates/includes/footer.html:13
+#: japanese_demo_website/templates/site_base.html:42
 msgid "Footer navigation"
 msgstr ""
 
@@ -334,8 +329,8 @@ msgstr ""
 
 #. Label of the language (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
-#: japanese_demo_website/templates/includes/header.html:22
-#: japanese_demo_website/templates/site_base.html:35
+#: japanese_demo_website/templates/includes/header.html:20
+#: japanese_demo_website/templates/site_base.html:37
 msgid "Language"
 msgstr ""
 
@@ -343,8 +338,8 @@ msgstr ""
 msgid "Launch and support"
 msgstr ""
 
-#: japanese_demo_website/templates/includes/footer.html:23
-#: japanese_demo_website/templates/site_base.html:40
+#: japanese_demo_website/templates/includes/footer.html:24
+#: japanese_demo_website/templates/site_base.html:42
 msgid "Light"
 msgstr ""
 
@@ -353,13 +348,13 @@ msgstr ""
 msgid "Lowercase letters, numbers and hyphens. The article is served at /news/&lt;slug&gt;."
 msgstr ""
 
-#: japanese_demo_website/templates/includes/header.html:15
-#: japanese_demo_website/templates/site_base.html:35
+#: japanese_demo_website/templates/includes/header.html:13
+#: japanese_demo_website/templates/site_base.html:37
 msgid "Main navigation"
 msgstr ""
 
-#: japanese_demo_website/templates/includes/header.html:12
-#: japanese_demo_website/templates/site_base.html:35
+#: japanese_demo_website/templates/includes/header.html:10
+#: japanese_demo_website/templates/site_base.html:37
 msgid "Menu"
 msgstr ""
 
@@ -471,13 +466,11 @@ msgstr ""
 msgid "Phone number"
 msgstr ""
 
+#: japanese_demo_website/templates/includes/header.html:5
 #: japanese_demo_website/templates/includes/header.html:6
-#: japanese_demo_website/templates/site_base.html:35
-msgid "Pixelcare"
-msgstr ""
-
 #: japanese_demo_website/templates/site_base.html:6
 #: japanese_demo_website/templates/site_base.html:11
+#: japanese_demo_website/templates/site_base.html:37
 msgid "Pixelcare Consulting"
 msgstr ""
 
@@ -617,7 +610,7 @@ msgstr ""
 msgid "Site language the visitor used when submitting"
 msgstr ""
 
-#: japanese_demo_website/templates/site_base.html:34
+#: japanese_demo_website/templates/site_base.html:36
 msgid "Skip to main content"
 msgstr ""
 
@@ -816,8 +809,8 @@ msgid "Website Manager"
 msgstr ""
 
 #: japanese_demo_website/templates/includes/contact_band.html:9
-#: japanese_demo_website/templates/includes/footer.html:9
-#: japanese_demo_website/templates/site_base.html:40
+#: japanese_demo_website/templates/includes/footer.html:10
+#: japanese_demo_website/templates/site_base.html:42
 #: japanese_demo_website/www/about.html:54
 #: japanese_demo_website/www/contact.html:110
 #: japanese_demo_website/www/index.html:65

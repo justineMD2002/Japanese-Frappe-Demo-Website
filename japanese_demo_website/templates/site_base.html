@@ -10,6 +10,8 @@
 	{%- endif %}
 	<meta property="og:title" content="{{ title or _("Pixelcare Consulting") }}">
 	<meta property="og:locale" content="{{ 'ja_JP' if site_lang() == 'ja' else 'en_US' }}">
+	<link rel="icon" type="image/png" sizes="64x64" href="{{ site_image_path('brand/favicon-64.png') }}">
+	<link rel="apple-touch-icon" href="{{ site_image_path('brand/apple-touch-icon.png') }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">

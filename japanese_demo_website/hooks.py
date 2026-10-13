@@ -287,6 +287,7 @@ jinja = {
 		"japanese_demo_website.website.company",
 		"japanese_demo_website.website.site_services",
 		"japanese_demo_website.website.site_image",
+		"japanese_demo_website.website.site_image_path",
 		"japanese_demo_website.website.site_image_srcset",
 	],
 	"filters": [
