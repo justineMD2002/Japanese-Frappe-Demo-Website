@@ -4,8 +4,15 @@
 {% block content %}
 {{ page_heading(_("Services"), _("Four services that cover a project from planning to day-to-day operation. You can use them together or on their own."), "banner-services") }}
 
+<section class="section" aria-labelledby="integration-heading">
+	<div class="container">
+		<h2 class="section__title" id="integration-heading">{{ _("How your systems connect") }}</h2>
+		{% include "japanese_demo_website/templates/includes/integration_diagram.html" %}
+	</div>
+</section>
+
 {%- for service in site_services() %}
-<section class="section{% if loop.index is even %} section--muted{% endif %}" id="service-{{ service.key }}" aria-labelledby="service-{{ service.key }}-title">
+<section class="section{% if loop.index is odd %} section--muted{% endif %}" id="service-{{ service.key }}" aria-labelledby="service-{{ service.key }}-title">
 	<div class="container feature{% if loop.index is even %} feature--reverse{% endif %}">
 		<div class="feature__media">
 			{{ photo("service-" ~ service.key, "", "(min-width: 960px) 480px, 100vw") }}
@@ -25,7 +32,7 @@
 </section>
 {%- endfor %}
 
-<section class="section" aria-labelledby="flow-heading">
+<section class="section section--muted" aria-labelledby="flow-heading">
 	<div class="container">
 		<h2 class="section__title" id="flow-heading">{{ _("How a project runs") }}</h2>
 		<ol class="flow">

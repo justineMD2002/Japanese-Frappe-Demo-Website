@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Japanese Demo Website VERSION\n"
 "Report-Msgid-Bugs-To: tech@pixelcareconsulting.com\n"
-"POT-Creation-Date: 2026-10-13 08:22+0000\n"
-"PO-Revision-Date: 2026-10-13 08:22+0000\n"
+"POT-Creation-Date: 2026-10-13 08:28+0000\n"
+"PO-Revision-Date: 2026-10-13 08:28+0000\n"
 "Last-Translator: tech@pixelcareconsulting.com\n"
 "Language-Team: tech@pixelcareconsulting.com\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,9 @@ msgid "A new system only helps if the people using it every day find it easier t
 msgstr ""
 
 #: japanese_demo_website/constants.py:95
+#: japanese_demo_website/templates/includes/integration_diagram.html:10
 #: japanese_demo_website/www/index.html:24
+#: japanese_demo_website/www/services.html:10
 msgid "AI and automation"
 msgstr ""
 
@@ -81,7 +83,7 @@ msgstr ""
 msgid "Back to news"
 msgstr ""
 
-#: japanese_demo_website/www/contact.html:103
+#: japanese_demo_website/www/contact.html:107
 msgid "Back to the home page"
 msgstr ""
 
@@ -138,7 +140,7 @@ msgstr ""
 msgid "Contact Pixelcare Consulting about our services, quotes or partnerships."
 msgstr ""
 
-#: japanese_demo_website/www/contact.html:108
+#: japanese_demo_website/www/contact.html:112
 msgid "Contact by phone"
 msgstr ""
 
@@ -173,6 +175,11 @@ msgstr ""
 msgid "Dark"
 msgstr ""
 
+#: japanese_demo_website/templates/includes/integration_diagram.html:60
+#: japanese_demo_website/www/services.html:10
+msgid "Data entered in one system reaches the others automatically, so nobody has to type it twice."
+msgstr ""
+
 #: japanese_demo_website/constants.py:55
 msgid "Data migration from spreadsheets and older systems"
 msgstr ""
@@ -182,7 +189,9 @@ msgstr ""
 msgid "Display mode"
 msgstr ""
 
+#: japanese_demo_website/templates/includes/integration_diagram.html:7
 #: japanese_demo_website/www/index.html:21
+#: japanese_demo_website/www/services.html:10
 msgid "ERPNext / Frappe"
 msgstr ""
 
@@ -260,7 +269,7 @@ msgstr ""
 msgid "Go to the first page"
 msgstr ""
 
-#: japanese_demo_website/www/services.html:37
+#: japanese_demo_website/www/services.html:45
 msgid "Hearing"
 msgstr ""
 
@@ -268,12 +277,16 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: japanese_demo_website/www/services.html:30
+#: japanese_demo_website/www/services.html:38
 msgid "How a project runs"
 msgstr ""
 
 #: japanese_demo_website/www/contact.html:80
 msgid "How we handle personal information"
+msgstr ""
+
+#: japanese_demo_website/www/services.html:9
+msgid "How your systems connect"
 msgstr ""
 
 #: japanese_demo_website/www/contact.html:90
@@ -290,7 +303,7 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: japanese_demo_website/www/services.html:45
+#: japanese_demo_website/www/services.html:53
 msgid "Implementation"
 msgstr ""
 
@@ -300,7 +313,7 @@ msgstr ""
 
 #. Name of a DocType
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
-#: japanese_demo_website/www/services.html:33
+#: japanese_demo_website/www/services.html:41
 msgid "Inquiry"
 msgstr ""
 
@@ -313,12 +326,17 @@ msgstr ""
 msgid "Inquiry type"
 msgstr ""
 
+#: japanese_demo_website/templates/includes/integration_diagram.html:51
+#: japanese_demo_website/www/services.html:10
+msgid "Integration layer"
+msgstr ""
+
 #: japanese_demo_website/constants.py:89
 msgid "Internal tools and dashboards"
 msgstr ""
 
 #: japanese_demo_website/www/about.html:54
-#: japanese_demo_website/www/contact.html:110
+#: japanese_demo_website/www/contact.html:114
 msgid "Japan time 10:00 to 19:00"
 msgstr ""
 
@@ -334,7 +352,7 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: japanese_demo_website/www/services.html:49
+#: japanese_demo_website/www/services.html:57
 msgid "Launch and support"
 msgstr ""
 
@@ -413,7 +431,7 @@ msgstr ""
 
 #: japanese_demo_website/templates/includes/contact_band.html:10
 #: japanese_demo_website/www/index.html:65
-#: japanese_demo_website/www/services.html:56
+#: japanese_demo_website/www/services.html:64
 msgid "Open the contact form"
 msgstr ""
 
@@ -514,7 +532,7 @@ msgstr ""
 msgid "Previous"
 msgstr ""
 
-#: japanese_demo_website/www/services.html:41
+#: japanese_demo_website/www/services.html:49
 msgid "Proposal and quote"
 msgstr ""
 
@@ -536,7 +554,7 @@ msgstr ""
 msgid "Reading and sorting documents and emails with AI"
 msgstr ""
 
-#: japanese_demo_website/www/contact.html:102
+#: japanese_demo_website/www/contact.html:106
 msgid "Reference number:"
 msgstr ""
 
@@ -552,7 +570,9 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+#: japanese_demo_website/templates/includes/integration_diagram.html:8
 #: japanese_demo_website/www/index.html:22
+#: japanese_demo_website/www/services.html:10
 msgid "SAP Business One"
 msgstr ""
 
@@ -653,21 +673,21 @@ msgstr ""
 
 #: japanese_demo_website/templates/includes/contact_band.html:5
 #: japanese_demo_website/www/index.html:65
-#: japanese_demo_website/www/services.html:56
+#: japanese_demo_website/www/services.html:64
 msgid "Talk to us about your systems"
 msgstr ""
 
-#: japanese_demo_website/www/services.html:34
+#: japanese_demo_website/www/services.html:42
 msgid "Tell us about your situation through the form or by phone."
 msgstr ""
 
 #: japanese_demo_website/templates/includes/contact_band.html:6
 #: japanese_demo_website/www/index.html:65
-#: japanese_demo_website/www/services.html:56
+#: japanese_demo_website/www/services.html:64
 msgid "Tell us what you use today and what you want to improve. We will reply by email."
 msgstr ""
 
-#: japanese_demo_website/www/contact.html:100
+#: japanese_demo_website/www/contact.html:104
 msgid "Thank you for your inquiry."
 msgstr ""
 
@@ -739,7 +759,7 @@ msgstr ""
 msgid "We build integrations that keep SAP Business One in sync with the systems around it. Syncs are designed to be safe to re-run and every failure is logged, so nothing is silently lost."
 msgstr ""
 
-#: japanese_demo_website/www/services.html:46
+#: japanese_demo_website/www/services.html:54
 msgid "We build, test and train with your team."
 msgstr ""
 
@@ -759,7 +779,7 @@ msgstr ""
 msgid "We do not share it with third parties except where required by law."
 msgstr ""
 
-#: japanese_demo_website/www/contact.html:101
+#: japanese_demo_website/www/contact.html:105
 msgid "We have received your message and will reply by email."
 msgstr ""
 
@@ -779,7 +799,7 @@ msgstr ""
 msgid "We look for the routine tasks that take your team the most time and automate them, using AI only where it is reliable enough for daily work."
 msgstr ""
 
-#: japanese_demo_website/www/services.html:38
+#: japanese_demo_website/www/services.html:46
 msgid "We meet online to understand your current process and systems."
 msgstr ""
 
@@ -791,7 +811,7 @@ msgstr ""
 msgid "We start from how your team works today, configure ERPNext to match, move your existing data across and train the people who will use it. Where the standard features are not enough, we build custom Frappe apps instead of changing the core system."
 msgstr ""
 
-#: japanese_demo_website/www/services.html:50
+#: japanese_demo_website/www/services.html:58
 msgid "We stay with you after go-live."
 msgstr ""
 
@@ -803,6 +823,11 @@ msgstr ""
 msgid "Web and app development"
 msgstr ""
 
+#: japanese_demo_website/templates/includes/integration_diagram.html:9
+#: japanese_demo_website/www/services.html:10
+msgid "Website / e-commerce"
+msgstr ""
+
 #. Name of a role
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
 msgid "Website Manager"
@@ -812,13 +837,13 @@ msgstr ""
 #: japanese_demo_website/templates/includes/footer.html:10
 #: japanese_demo_website/templates/site_base.html:42
 #: japanese_demo_website/www/about.html:54
-#: japanese_demo_website/www/contact.html:110
+#: japanese_demo_website/www/contact.html:114
 #: japanese_demo_website/www/index.html:65
-#: japanese_demo_website/www/services.html:56
+#: japanese_demo_website/www/services.html:64
 msgid "Weekdays 9:00 to 18:00 (Philippine time)"
 msgstr ""
 
-#: japanese_demo_website/www/services.html:17
+#: japanese_demo_website/www/services.html:25
 msgid "What we cover"
 msgstr ""
 
@@ -838,7 +863,7 @@ msgstr ""
 msgid "You have sent several inquiries in a short time. Please wait an hour and try again, or call us."
 msgstr ""
 
-#: japanese_demo_website/www/services.html:42
+#: japanese_demo_website/www/services.html:50
 msgid "You receive a written proposal, schedule and quote."
 msgstr ""
 

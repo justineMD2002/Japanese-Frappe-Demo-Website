@@ -249,17 +249,33 @@
 		font-size: var(--text-sm);
 		font-weight: 700;
 		text-decoration: none;
-		border-bottom: 2px solid transparent;
+		position: relative;
+	}
+
+	& .site-nav__link::after {
+		content: "";
+		position: absolute;
+		left: var(--s-3);
+		right: var(--s-3);
+		bottom: 0;
+		height: 2px;
+		background: var(--accent);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.25s var(--ease);
 	}
 
 	& .site-nav__link:hover {
 		color: var(--accent);
-		border-bottom-color: var(--rule-strong);
+	}
+
+	& .site-nav__link:hover::after,
+	& .site-nav__link[aria-current="page"]::after {
+		transform: scaleX(1);
 	}
 
 	& .site-nav__link[aria-current="page"] {
 		color: var(--accent);
-		border-bottom-color: var(--accent);
 	}
 
 	& .lang-switch {
@@ -394,6 +410,45 @@
 		& .site-nav__link[aria-current="page"] {
 			border-bottom-color: var(--rule);
 			background: var(--accent-tint);
+		}
+
+		& .site-nav__link::after {
+			content: none;
+		}
+
+		&.js .site-nav__list li,
+		&.js .site-nav .lang-switch {
+			opacity: 0;
+			transform: translateY(-6px);
+			transition:
+				opacity 0.25s var(--ease),
+				transform 0.25s var(--ease);
+		}
+
+		&.js .site-nav.is-open .site-nav__list li,
+		&.js .site-nav.is-open .lang-switch {
+			opacity: 1;
+			transform: none;
+		}
+
+		&.js .site-nav.is-open .site-nav__list li:nth-child(2) {
+			transition-delay: 0.03s;
+		}
+
+		&.js .site-nav.is-open .site-nav__list li:nth-child(3) {
+			transition-delay: 0.06s;
+		}
+
+		&.js .site-nav.is-open .site-nav__list li:nth-child(4) {
+			transition-delay: 0.09s;
+		}
+
+		&.js .site-nav.is-open .site-nav__list li:nth-child(5) {
+			transition-delay: 0.12s;
+		}
+
+		&.js .site-nav.is-open .lang-switch {
+			transition-delay: 0.15s;
 		}
 
 		& .lang-switch {
@@ -1555,6 +1610,109 @@
 		--gutter: var(--s-5);
 	}
 
+	/* Integration diagram (templates/includes/integration_diagram.html) */
+
+	& .flow-figure {
+		margin: 0;
+	}
+
+	& .flow-diagram {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		font-family: var(--font);
+	}
+
+	& .flow-diagram--wide {
+		display: none;
+	}
+
+	& .flow-diagram--tall {
+		max-width: 420px;
+	}
+
+	@media (min-width: 768px) {
+		& .flow-diagram--wide {
+			display: block;
+		}
+
+		& .flow-diagram--tall {
+			display: none;
+		}
+	}
+
+	& .flow-diagram__link {
+		fill: none;
+		stroke: var(--accent);
+		stroke-width: 2;
+		stroke-dasharray: 6 10;
+		stroke-linecap: round;
+	}
+
+	& .flow-diagram__packet {
+		fill: var(--accent);
+		offset-rotate: 0deg;
+	}
+
+	& .flow-diagram__node rect {
+		fill: var(--paper);
+		stroke: var(--rule-strong);
+		stroke-width: 1.5;
+	}
+
+	& .flow-diagram__hub rect {
+		fill: var(--accent);
+	}
+
+	& .flow-diagram text {
+		fill: var(--ink);
+		font-size: 16px;
+		font-weight: 700;
+		text-anchor: middle;
+		dominant-baseline: central;
+	}
+
+	& .flow-diagram--tall .flow-diagram__node text {
+		font-size: 14px;
+	}
+
+	& .flow-diagram__hub text {
+		fill: var(--on-accent);
+		font-size: 18px;
+	}
+
+	& .flow-diagram__hub .flow-diagram__hub-sub {
+		font-size: 13px;
+		font-weight: 400;
+	}
+
+	& .flow-figure__caption {
+		margin-top: var(--s-4);
+		color: var(--ink-muted);
+		text-align: center;
+	}
+
+	& .form-success__check {
+		width: 52px;
+		height: 52px;
+		fill: none;
+		stroke: var(--success);
+		stroke-width: 3;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	& .form-success__check circle {
+		stroke-dasharray: 151;
+		stroke-dashoffset: 151;
+	}
+
+	& .form-success__check path {
+		stroke-dasharray: 36;
+		stroke-dashoffset: 36;
+	}
+
 	/* Motion. Kept to state changes and one entrance on load; nothing animates on scroll. */
 
 	& [id] {
@@ -1582,21 +1740,43 @@
 		transform: scale(1.05);
 	}
 
-	@keyframes jdw-rise {
-		from {
-			opacity: 0;
-			transform: translateY(16px);
-		}
-	}
-
-	@keyframes jdw-settle {
-		from {
-			transform: scale(1.06);
-		}
-	}
-
 	& .hero__image {
-		animation: jdw-settle 1.6s var(--ease) both;
+		animation: jdw-pan 28s ease-in-out infinite alternate both;
+	}
+
+	/* news cards lift a little on hover */
+	& .news-card {
+		transition: transform 0.3s var(--ease);
+	}
+
+	& .news-card__media {
+		transition: box-shadow 0.3s var(--ease);
+	}
+
+	& .news-card:hover {
+		transform: translateY(-4px);
+	}
+
+	& .news-card:hover .news-card__media {
+		box-shadow: 0 14px 28px -14px rgb(0 0 0 / 0.45);
+	}
+
+	/* integration diagram: dashes drift towards the hub and a packet travels each link */
+	& .flow-diagram__link {
+		animation: jdw-dash 1.6s linear infinite;
+	}
+
+	& .flow-diagram__packet {
+		animation: jdw-packet 2.8s var(--ease) infinite both;
+	}
+
+	/* success check draws itself once */
+	& .form-success:not([hidden]) .form-success__check circle {
+		animation: jdw-draw 0.5s var(--ease) both;
+	}
+
+	& .form-success:not([hidden]) .form-success__check path {
+		animation: jdw-draw 0.35s var(--ease) 0.4s both;
 	}
 
 	& .hero__copy > * {
@@ -1621,7 +1801,78 @@
 		& *::after {
 			animation-duration: 0.01ms !important;
 			animation-delay: 0s !important;
+			animation-iteration-count: 1 !important;
 			transition-duration: 0.01ms !important;
+			transition-delay: 0s !important;
 		}
+
+		& .flow-diagram__packet {
+			display: none;
+		}
+	}
+}
+
+/* Cross-document page transitions: the header stays put while the page content crossfades.
+   Browsers without support simply navigate normally. */
+@media (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
+
+	.jdw .site-header {
+		view-transition-name: jdw-header;
+	}
+
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 0.25s;
+	}
+}
+
+/* Keyframes live at the top level: @keyframes is not allowed inside a nested style rule. */
+
+@keyframes jdw-rise {
+	from {
+		opacity: 0;
+		transform: translateY(16px);
+	}
+}
+
+@keyframes jdw-pan {
+	from {
+		transform: scale(1.08) translateX(1.5%);
+	}
+
+	to {
+		transform: scale(1.08) translateX(-1.5%);
+	}
+}
+
+@keyframes jdw-dash {
+	to {
+		stroke-dashoffset: -32;
+	}
+}
+
+@keyframes jdw-packet {
+	from {
+		offset-distance: 0%;
+		opacity: 0;
+	}
+
+	15%,
+	85% {
+		opacity: 1;
+	}
+
+	to {
+		offset-distance: 100%;
+		opacity: 0;
+	}
+}
+
+@keyframes jdw-draw {
+	to {
+		stroke-dashoffset: 0;
 	}
 }

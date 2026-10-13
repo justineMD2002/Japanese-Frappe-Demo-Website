@@ -1,0 +1,61 @@
+{#-
+	Hub-and-spoke diagram of the systems we connect. Drawn twice from the same node list:
+	a wide layout for desktop and a tall one for phones, so labels stay readable at both sizes.
+	Each link has a dashed "data flow" line and a dot that travels along it (CSS, see .flow-diagram).
+-#}
+{%- set nodes = (
+	("erp", _("ERPNext / Frappe")),
+	("sap", _("SAP Business One")),
+	("web", _("Website / e-commerce")),
+	("ai", _("AI and automation")),
+) %}
+{%- set layouts = {
+	"wide": {
+		"view": (880, 360), "hub": (440, 180, 240, 92), "node": (210, 64),
+		"points": ((115, 76), (115, 284), (765, 76), (765, 284)),
+	},
+	"tall": {
+		"view": (360, 600), "hub": (180, 300, 240, 92), "node": (172, 64),
+		"points": ((88, 60), (272, 60), (88, 540), (272, 540)),
+	},
+} %}
+
+{% macro diagram(layout_name) -%}
+{%- set layout = layouts[layout_name] %}
+{%- set hx, hy, hw, hh = layout.hub %}
+{%- set nw, nh = layout.node %}
+<svg class="flow-diagram flow-diagram--{{ layout_name }}" viewBox="0 0 {{ layout.view[0] }} {{ layout.view[1] }}" role="img" aria-labelledby="flow-diagram-caption">
+	{%- for key, label in nodes %}
+	{%- set x, y = layout.points[loop.index0] %}
+	{#- link from the node's inner edge to the hub's edge, as a gentle S-curve #}
+	{%- if layout_name == "wide" %}
+	{%- set sx = x + nw / 2 if x < hx else x - nw / 2 %}
+	{%- set ex = hx - hw / 2 if x < hx else hx + hw / 2 %}
+	{%- set mid = (sx + ex) / 2 %}
+	{%- set d = "M%d %d C%d %d %d %d %d %d" | format(sx, y, mid, y, mid, hy, ex, hy) %}
+	{%- else %}
+	{%- set sy = y + nh / 2 if y < hy else y - nh / 2 %}
+	{%- set ey = hy - hh / 2 if y < hy else hy + hh / 2 %}
+	{%- set mid = (sy + ey) / 2 %}
+	{%- set d = "M%d %d C%d %d %d %d %d %d" | format(x, sy, x, mid, hx, mid, hx, ey) %}
+	{%- endif %}
+	<path class="flow-diagram__link" d="{{ d }}"/>
+	<circle class="flow-diagram__packet" r="5" style="offset-path: path('{{ d }}'); animation-delay: {{ loop.index0 * 0.7 }}s"/>
+	<g class="flow-diagram__node">
+		<rect x="{{ x - nw / 2 }}" y="{{ y - nh / 2 }}" width="{{ nw }}" height="{{ nh }}" rx="4"/>
+		<text x="{{ x }}" y="{{ y }}">{{ label }}</text>
+	</g>
+	{%- endfor %}
+	<g class="flow-diagram__hub">
+		<rect x="{{ hx - hw / 2 }}" y="{{ hy - hh / 2 }}" width="{{ hw }}" height="{{ hh }}" rx="4"/>
+		<text x="{{ hx }}" y="{{ hy - 12 }}">{{ _("Integration layer") }}</text>
+		<text class="flow-diagram__hub-sub" x="{{ hx }}" y="{{ hy + 18 }}">Service Layer / REST API</text>
+	</g>
+</svg>
+{%- endmacro %}
+
+<figure class="flow-figure">
+	{{ diagram("wide") }}
+	{{ diagram("tall") }}
+	<figcaption class="flow-figure__caption" id="flow-diagram-caption">{{ _("Data entered in one system reaches the others automatically, so nobody has to type it twice.") }}</figcaption>
+</figure>
