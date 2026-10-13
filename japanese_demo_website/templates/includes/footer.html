@@ -1,0 +1,22 @@
+<footer class="site-footer">
+	<div class="container site-footer__inner">
+		<div class="site-footer__company">
+			<p class="site-footer__name">{{ _("Minato Link Co., Ltd.") }}</p>
+			<address>
+				{{ _("Postal code 108-0075") }}<br>
+				{{ _("5F Minato Building, 9-9-9 Konan, Minato-ku, Tokyo") }}<br>
+				{{ _("Tel: 03-1234-5678 (Weekdays 9:00 to 18:00)") }}
+			</address>
+		</div>
+		<nav aria-label="{{ _('Footer navigation') }}">
+			<ul class="site-footer__nav">
+				{%- for item in site_nav(active_route) %}
+				<li><a href="{{ item.route }}">{{ item.label }}</a></li>
+				{%- endfor %}
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+		<p class="site-footer__copy">&copy; 2026 {{ _("Minato Link Co., Ltd.") }}</p>
+	</div>
+</footer>

@@ -1,0 +1,113 @@
+{% extends "japanese_demo_website/templates/site_base.html" %}
+{% from "japanese_demo_website/templates/includes/macros.html" import page_heading %}
+
+{% macro required_mark() -%}
+<span class="field__required">{{ _("Required") }}</span>
+{%- endmacro %}
+
+{% block content %}
+{{ page_heading(_("Contact"), _("Fill in the form below and we will reply by email, usually within two business days. For urgent matters, please call us.")) }}
+
+<section class="section section--tight">
+	<div class="container contact-layout">
+		<div class="contact-layout__form">
+			<div class="form-alert" id="inquiry-error" role="alert" hidden></div>
+
+			<form class="form" id="inquiry-form" novalidate
+				data-endpoint="/api/method/japanese_demo_website.api.submit_inquiry"
+				data-msg-sending="{{ _('Sending...') }}"
+				data-msg-required="{{ _('This field is required.') }}"
+				data-msg-email="{{ _('Please enter a valid email address.') }}"
+				data-msg-consent="{{ _('Please agree to the privacy policy before sending.') }}"
+				data-msg-invalid="{{ _('Please check the highlighted fields.') }}"
+				data-msg-rate-limit="{{ _('You have sent several inquiries in a short time. Please wait an hour and try again, or call us.') }}"
+				data-msg-network="{{ _('We could not reach the server. Check your connection and try again.') }}"
+				data-msg-generic="{{ _('Something went wrong and your inquiry was not sent. Please try again or call us.') }}">
+
+				<div class="field">
+					<label class="field__label" for="inquiry_type">{{ _("Inquiry type") }} {{ required_mark() }}</label>
+					<select class="field__input" id="inquiry_type" name="inquiry_type" required>
+						{%- for value in inquiry_types %}
+						<option value="{{ value }}">{{ value | status_label }}</option>
+						{%- endfor %}
+					</select>
+				</div>
+
+				<div class="field">
+					<label class="field__label" for="company">{{ _("Company") }}</label>
+					<input class="field__input" id="company" name="company" type="text" autocomplete="organization" maxlength="{{ max_lengths.company }}">
+				</div>
+
+				<div class="field-row">
+					<div class="field">
+						<label class="field__label" for="full_name">{{ _("Name") }} {{ required_mark() }}</label>
+						<input class="field__input" id="full_name" name="full_name" type="text" autocomplete="name" maxlength="{{ max_lengths.full_name }}" required aria-describedby="full_name-error">
+						<p class="field__error" id="full_name-error" hidden></p>
+					</div>
+					<div class="field">
+						<label class="field__label" for="name_kana">{{ _("Name (Kana)") }}</label>
+						<input class="field__input" id="name_kana" name="name_kana" type="text" maxlength="{{ max_lengths.name_kana }}" placeholder="{{ _('e.g. Yamada Taro') }}">
+					</div>
+				</div>
+
+				<div class="field-row">
+					<div class="field">
+						<label class="field__label" for="email">{{ _("Email address") }} {{ required_mark() }}</label>
+						<input class="field__input" id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="{{ max_lengths.email }}" required aria-describedby="email-error">
+						<p class="field__error" id="email-error" hidden></p>
+					</div>
+					<div class="field">
+						<label class="field__label" for="phone">{{ _("Phone number") }}</label>
+						<input class="field__input" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="{{ max_lengths.phone }}" placeholder="03-1234-5678">
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="field__label" for="message">{{ _("Message") }} {{ required_mark() }}</label>
+					<textarea class="field__input field__input--textarea" id="message" name="message" rows="7" maxlength="{{ max_lengths.message }}" required aria-describedby="message-hint message-error"></textarea>
+					<p class="field__hint" id="message-hint">{{ _("Up to {0} characters.").format(max_lengths.message) }}</p>
+					<p class="field__error" id="message-error" hidden></p>
+				</div>
+
+				{# honeypot: hidden from people and screen readers, filled in by naive bots #}
+				<div class="hp" aria-hidden="true">
+					<label for="website">Website</label>
+					<input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+				</div>
+
+				<details class="privacy">
+					<summary>{{ _("How we handle personal information") }}</summary>
+					<div class="privacy__body">
+						<p>{{ _("We use the information you enter only to reply to your inquiry and to provide the services you ask about.") }}</p>
+						<p>{{ _("We do not share it with third parties except where required by law.") }}</p>
+						<p>{{ _("To see, correct or delete your information, contact us by phone or through this form.") }}</p>
+					</div>
+				</details>
+
+				<div class="field field--check">
+					<input id="privacy_consent" name="privacy_consent" type="checkbox" value="1" required aria-describedby="privacy_consent-error">
+					<label for="privacy_consent">{{ _("I agree to the handling of personal information described above.") }} {{ required_mark() }}</label>
+					<p class="field__error" id="privacy_consent-error" hidden></p>
+				</div>
+
+				<div class="form__actions">
+					<button class="button button--primary button--wide" type="submit">{{ _("Send inquiry") }}</button>
+				</div>
+			</form>
+
+			<div class="form-success" id="inquiry-success" tabindex="-1" hidden>
+				<h2 class="form-success__title">{{ _("Thank you for your inquiry.") }}</h2>
+				<p>{{ _("We have received your message and will reply by email within two business days.") }}</p>
+				<p>{{ _("Reference number:") }} <strong id="inquiry-reference"></strong></p>
+				<a class="text-link" href="/">{{ _("Back to the home page") }}</a>
+			</div>
+		</div>
+
+		<aside class="contact-layout__aside" aria-labelledby="phone-heading">
+			<h2 class="subheading" id="phone-heading">{{ _("Contact by phone") }}</h2>
+			<p class="contact-phone">03-1234-5678</p>
+			<p class="muted">{{ _("Weekdays 9:00 to 18:00, except national holidays and the year-end holidays.") }}</p>
+		</aside>
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site_lang() }}" class="jdw">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% if title %}{{ title }} | {% endif %}{{ _("Minato Link Co., Ltd.") }}{% endblock %}</title>
+	{%- if metatags and metatags.description %}
+	<meta name="description" content="{{ metatags.description }}">
+	<meta property="og:description" content="{{ metatags.description }}">
+	{%- endif %}
+	<meta property="og:title" content="{{ title or _('Minato Link Co., Ltd.') }}">
+	<meta property="og:locale" content="{{ 'ja_JP' if site_lang() == 'ja' else 'en_US' }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+	{%- for link in web_include_css %}
+	{{ include_style(link) }}
+	{%- endfor %}
+	<script>document.documentElement.classList.add("js"); window.frappe = window.frappe || {};</script>
+</head>
+<body>
+	<a class="skip-link" href="#main">{{ _("Skip to main content") }}</a>
+	{% include "japanese_demo_website/templates/includes/header.html" %}
+	<main id="main" tabindex="-1">
+		{% block content %}{% endblock %}
+	</main>
+	{% include "japanese_demo_website/templates/includes/footer.html" %}
+	<!-- csrf_token -->
+	{%- for link in web_include_js %}
+	{{ include_script(link) }}
+	{%- endfor %}
+</body>
+</html>

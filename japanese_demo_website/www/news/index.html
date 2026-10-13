@@ -1,0 +1,51 @@
+{% extends "japanese_demo_website/templates/site_base.html" %}
+{% from "japanese_demo_website/templates/includes/macros.html" import page_heading, news_rows %}
+
+{% macro news_url(category_value=None, page_number=1) -%}
+/news{% if category_value or page_number > 1 %}?{% endif %}{% if category_value %}category={{ category_value }}{% endif %}{% if category_value and page_number > 1 %}&amp;{% endif %}{% if page_number > 1 %}page={{ page_number }}{% endif %}
+{%- endmacro %}
+
+{% block content %}
+{{ page_heading(_("News")) }}
+
+<section class="section section--tight">
+	<div class="container">
+		<nav class="filter-tabs" aria-label="{{ _('Filter by category') }}">
+			<a class="filter-tabs__tab" href="{{ news_url() }}"{% if not category %} aria-current="page"{% endif %}>{{ _("All") }}</a>
+			{%- for value in categories %}
+			<a class="filter-tabs__tab" href="{{ news_url(value) }}"{% if category == value %} aria-current="page"{% endif %}>{{ value | status_label }}</a>
+			{%- endfor %}
+		</nav>
+
+		{% if articles %}
+		{{ news_rows(articles) }}
+		{% elif total and page > page_count %}
+		<div class="empty-state">
+			<p>{{ _("This page does not exist. The list may have become shorter.") }}</p>
+			<a class="text-link" href="{{ news_url(category) }}">{{ _("Go to the first page") }}</a>
+		</div>
+		{% elif category %}
+		<div class="empty-state">
+			<p>{{ _("There are no articles in this category yet.") }}</p>
+			<a class="text-link" href="{{ news_url() }}">{{ _("Show all news") }}</a>
+		</div>
+		{% else %}
+		<div class="empty-state">
+			<p>{{ _("There are no announcements at the moment.") }}</p>
+		</div>
+		{% endif %}
+
+		{% if page_count > 1 %}
+		<nav class="pagination" aria-label="{{ _('Pages') }}">
+			{%- if page > 1 %}
+			<a class="pagination__link" href="{{ news_url(category, page - 1) }}" rel="prev">{{ _("Previous") }}</a>
+			{%- endif %}
+			<span class="pagination__status">{{ _("Page {0} of {1}").format(page, page_count) }}</span>
+			{%- if page < page_count %}
+			<a class="pagination__link" href="{{ news_url(category, page + 1) }}" rel="next">{{ _("Next") }}</a>
+			{%- endif %}
+		</nav>
+		{% endif %}
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+<header class="site-header">
+	<div class="container site-header__inner">
+		<a class="brand" href="/">
+			<span class="brand__mark" aria-hidden="true"></span>
+			<span class="brand__name">{{ _("Minato Link") }}</span>
+		</a>
+		<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+			<span class="nav-toggle__bars" aria-hidden="true"></span>
+			<span class="nav-toggle__label">{{ _("Menu") }}</span>
+		</button>
+		<div class="site-nav" id="site-nav">
+			<nav aria-label="{{ _('Main navigation') }}">
+				<ul class="site-nav__list">
+					{%- for item in site_nav(active_route) %}
+					<li><a href="{{ item.route }}" class="site-nav__link"{% if item.is_active %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+					{%- endfor %}
+				</ul>
+			</nav>
+			<div class="lang-switch" role="group" aria-label="{{ _('Language') }}">
+				{%- for code, label in (("ja", "日本語"), ("en", "EN")) %}
+				<a href="{{ lang_switch_url(code) }}" class="lang-switch__option" data-lang="{{ code }}" lang="{{ code }}"{% if site_lang() == code %} aria-current="true"{% endif %}>{{ label }}</a>
+				{%- endfor %}
+			</div>
+		</div>
+	</div>
+</header>

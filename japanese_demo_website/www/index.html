@@ -1,0 +1,74 @@
+{% extends "japanese_demo_website/templates/site_base.html" %}
+{% from "japanese_demo_website/templates/includes/macros.html" import news_rows %}
+
+{% block content %}
+<section class="hero">
+	<div class="container hero__inner">
+		<div class="hero__copy">
+			<h1 class="hero__title">{{ _("Systems that fit the way your business already works.") }}</h1>
+			<p class="hero__lead">{{ _("We help small and mid-sized companies replace paper and spreadsheets in ordering, inventory and billing, from the first review of your current process to support after launch.") }}</p>
+			<div class="button-row">
+				<a class="button button--primary" href="/contact">{{ _("Contact us") }}</a>
+				<a class="button button--secondary" href="/services">{{ _("See our services") }}</a>
+			</div>
+		</div>
+		<dl class="facts">
+			<div class="facts__item">
+				<dt>{{ _("Founded") }}</dt>
+				<dd>{{ _("April 2012") }}</dd>
+			</div>
+			<div class="facts__item">
+				<dt>{{ _("Client companies") }}</dt>
+				<dd>{{ _("320+ companies") }}</dd>
+			</div>
+			<div class="facts__item">
+				<dt>{{ _("Employees") }}</dt>
+				<dd>{{ _("48 people") }}</dd>
+			</div>
+			<div class="facts__item">
+				<dt>{{ _("Offices") }}</dt>
+				<dd>{{ _("Tokyo, Osaka") }}</dd>
+			</div>
+		</dl>
+	</div>
+</section>
+
+<section class="section" aria-labelledby="home-news-heading">
+	<div class="container">
+		<div class="section__head">
+			<h2 class="section__title" id="home-news-heading">{{ _("News") }}</h2>
+			<a class="text-link" href="/news">{{ _("View all news") }}</a>
+		</div>
+		{% if latest_news %}
+		{{ news_rows(latest_news) }}
+		{% else %}
+		<p class="empty-state">{{ _("There are no announcements at the moment.") }}</p>
+		{% endif %}
+	</div>
+</section>
+
+<section class="section section--muted" aria-labelledby="home-services-heading">
+	<div class="container">
+		<div class="section__head">
+			<h2 class="section__title" id="home-services-heading">{{ _("Services") }}</h2>
+			<a class="text-link" href="/services">{{ _("Service details") }}</a>
+		</div>
+		<ol class="numbered-list">
+			<li class="numbered-list__item">
+				<h3 class="numbered-list__title">{{ _("Business process consulting") }}</h3>
+				<p>{{ _("We map how orders, stock and invoices move through your company today and agree with you on what to change first.") }}</p>
+			</li>
+			<li class="numbered-list__item">
+				<h3 class="numbered-list__title">{{ _("System implementation") }}</h3>
+				<p>{{ _("We configure and connect business systems, migrate your existing data and train the people who will use them.") }}</p>
+			</li>
+			<li class="numbered-list__item">
+				<h3 class="numbered-list__title">{{ _("Operations support") }}</h3>
+				<p>{{ _("After launch we answer questions, handle changes and keep the system running, with a named contact for your company.") }}</p>
+			</li>
+		</ol>
+	</div>
+</section>
+
+{% include "japanese_demo_website/templates/includes/contact_band.html" %}
+{% endblock %}

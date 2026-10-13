@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "autoname": "format:INQ-{YYYY}-{#####}",
+ "creation": "2026-10-13 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "inquiry_type",
+  "column_break_status",
+  "language",
+  "section_contact",
+  "full_name",
+  "name_kana",
+  "company",
+  "column_break_contact",
+  "email",
+  "phone",
+  "section_message",
+  "message",
+  "privacy_consent"
+ ],
+ "fields": [
+  {
+   "default": "NEW",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "NEW\nIN_PROGRESS\nCLOSED",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "inquiry_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Inquiry Type",
+   "options": "SERVICES\nESTIMATE\nPARTNERSHIP\nOTHER",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_status",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Site language the visitor used when submitting",
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_contact",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "length": 100,
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_kana",
+   "fieldtype": "Data",
+   "label": "Name (Kana)",
+   "length": 100
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company",
+   "length": 140
+  },
+  {
+   "fieldname": "column_break_contact",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "length": 254,
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "length": 30,
+   "options": "Phone"
+  },
+  {
+   "fieldname": "section_message",
+   "fieldtype": "Section Break",
+   "label": "Message"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Long Text",
+   "label": "Message",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "privacy_consent",
+   "fieldtype": "Check",
+   "label": "Agreed to Privacy Policy",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-13 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Japanese Demo Website",
+ "name": "Inquiry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name",
+ "track_changes": 1
+}

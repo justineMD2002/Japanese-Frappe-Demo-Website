@@ -262,3 +262,36 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+# Website
+# -------
+
+home_page = "index"
+
+web_include_css = "/assets/japanese_demo_website/css/website.css"
+web_include_js = "/assets/japanese_demo_website/js/website.js"
+
+website_route_rules = [
+	{"from_route": "/news/<slug>", "to_route": "news/article"},
+]
+
+# Japanese by default on this app's routes (see language.py)
+before_request = ["japanese_demo_website.language.set_site_language"]
+
+jinja = {
+	"methods": [
+		"japanese_demo_website.website.site_nav",
+		"japanese_demo_website.website.site_lang",
+		"japanese_demo_website.website.lang_switch_url",
+		"japanese_demo_website.website.localized",
+	],
+	"filters": [
+		"japanese_demo_website.website.site_date",
+		"japanese_demo_website.website.status_label",
+	],
+}
+
+# Installation
+# ------------
+
+after_install = "japanese_demo_website.install.after_install"

@@ -1,0 +1,23 @@
+{% extends "japanese_demo_website/templates/site_base.html" %}
+
+{% block content %}
+<article class="article">
+	<header class="page-heading">
+		<div class="container container--narrow">
+			<p class="news-list__meta">
+				<time datetime="{{ article.published_on }}">{{ article.published_on | site_date }}</time>
+				<span class="tag tag--{{ article.category | lower }}">{{ article.category | status_label }}</span>
+			</p>
+			<h1 class="page-heading__title">{{ article.title | e }}</h1>
+		</div>
+	</header>
+	<div class="section">
+		<div class="container container--narrow prose">
+			{{ article.content }}
+		</div>
+		<div class="container container--narrow">
+			<a class="text-link text-link--back" href="/news">{{ _("Back to news") }}</a>
+		</div>
+	</div>
+</article>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "japanese_demo_website/templates/site_base.html" %}
+{% from "japanese_demo_website/templates/includes/macros.html" import page_heading %}
+
+{% block content %}
+{{ page_heading(_("About Us"), _("Who we are and how we work with our clients.")) }}
+
+<nav class="container in-page-nav" aria-label="{{ _('On this page') }}">
+	<ul>
+		<li><a href="#message">{{ _("Message from the President") }}</a></li>
+		<li><a href="#philosophy">{{ _("Our Philosophy") }}</a></li>
+		<li><a href="#profile">{{ _("Company Profile") }}</a></li>
+		<li><a href="#history">{{ _("History") }}</a></li>
+		<li><a href="#access">{{ _("Offices") }}</a></li>
+	</ul>
+</nav>
+
+<section class="section" id="message" aria-labelledby="message-heading">
+	<div class="container prose">
+		<h2 class="section__title" id="message-heading">{{ _("Message from the President") }}</h2>
+		<p>{{ _("Since our founding in 2012, we have worked with small and mid-sized companies whose daily work still depends on paper forms, phone calls and spreadsheets.") }}</p>
+		<p>{{ _("A new system only helps if the people using it every day find it easier than what they had before. That is why we start by watching how the work is actually done, and we stay with our clients after launch until the new way of working has settled in.") }}</p>
+		<p>{{ _("We will keep earning our clients' trust one project at a time.") }}</p>
+		<p class="signature">{{ _("Kenji Tanaka, President and CEO") }}</p>
+	</div>
+</section>
+
+<section class="section section--muted" id="philosophy" aria-labelledby="philosophy-heading">
+	<div class="container">
+		<h2 class="section__title" id="philosophy-heading">{{ _("Our Philosophy") }}</h2>
+		<ol class="numbered-list">
+			<li class="numbered-list__item">
+				<h3 class="numbered-list__title">{{ _("Start from the work, not the tool") }}</h3>
+				<p>{{ _("We choose and design systems around how your team operates, not the other way around.") }}</p>
+			</li>
+			<li class="numbered-list__item">
+				<h3 class="numbered-list__title">{{ _("Explain things plainly") }}</h3>
+				<p>{{ _("Estimates, schedules and risks are explained in terms everyone in the room can follow.") }}</p>
+			</li>
+			<li class="numbered-list__item">
+				<h3 class="numbered-list__title">{{ _("Stay for the long term") }}</h3>
+				<p>{{ _("Most of our clients have worked with us for more than five years.") }}</p>
+			</li>
+		</ol>
+	</div>
+</section>
+
+<section class="section" id="profile" aria-labelledby="profile-heading">
+	<div class="container">
+		<h2 class="section__title" id="profile-heading">{{ _("Company Profile") }}</h2>
+		<dl class="data-table">
+			<div class="data-table__row"><dt>{{ _("Company name") }}</dt><dd>{{ _("Minato Link Co., Ltd.") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("Founded") }}</dt><dd>{{ _("April 2012") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("Representative") }}</dt><dd>{{ _("Kenji Tanaka, President and CEO") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("Capital") }}</dt><dd>{{ _("50 million yen") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("Employees") }}</dt><dd>{{ _("48 (as of October 2026)") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("Head office") }}</dt><dd>{{ _("Postal code 108-0075") }} {{ _("5F Minato Building, 9-9-9 Konan, Minato-ku, Tokyo") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("Business") }}</dt><dd>{{ _("Business process consulting, system implementation, operations support") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("Certifications") }}</dt><dd>{{ _("ISO/IEC 27001 (information security)") }}</dd></div>
+		</dl>
+	</div>
+</section>
+
+<section class="section section--muted" id="history" aria-labelledby="history-heading">
+	<div class="container">
+		<h2 class="section__title" id="history-heading">{{ _("History") }}</h2>
+		<dl class="data-table data-table--timeline">
+			<div class="data-table__row"><dt>{{ _("April 2012") }}</dt><dd>{{ _("Founded in Minato-ku, Tokyo") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("June 2016") }}</dt><dd>{{ _("Started the operations support service") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("March 2020") }}</dt><dd>{{ _("Moved the head office to Konan, Minato-ku") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("July 2026") }}</dt><dd>{{ _("Obtained ISO/IEC 27001 certification") }}</dd></div>
+			<div class="data-table__row"><dt>{{ _("October 2026") }}</dt><dd>{{ _("Opened the Osaka office") }}</dd></div>
+		</dl>
+	</div>
+</section>
+
+<section class="section" id="access" aria-labelledby="access-heading">
+	<div class="container">
+		<h2 class="section__title" id="access-heading">{{ _("Offices") }}</h2>
+		<div class="office-grid">
+			<div class="office">
+				<h3 class="office__name">{{ _("Head office (Tokyo)") }}</h3>
+				<p>{{ _("Postal code 108-0075") }}<br>{{ _("5F Minato Building, 9-9-9 Konan, Minato-ku, Tokyo") }}</p>
+				<p class="muted">{{ _("5 minutes on foot from the Konan exit of Shinagawa Station") }}</p>
+			</div>
+			<div class="office">
+				<h3 class="office__name">{{ _("Osaka office") }}</h3>
+				<p>{{ _("Postal code 530-0001") }}<br>{{ _("8F Umeda Business Tower, 1-2-3 Umeda, Kita-ku, Osaka") }}</p>
+				<p class="muted">{{ _("7 minutes on foot from Osaka Station") }}</p>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
