@@ -23,6 +23,10 @@ build-backend = "flit_core.buildapi"
 [deploy.dependencies.apt]
 packages = []
 
+# Frappe Cloud reads this to check the app matches the bench group's Frappe version
+[tool.bench.frappe-dependencies]
+frappe = ">=16.0.0-dev,<17.0.0"
+
 [tool.ruff]
 line-length = 110
 target-version = "py314"
