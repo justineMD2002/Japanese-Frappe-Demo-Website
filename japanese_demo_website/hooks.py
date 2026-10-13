@@ -268,8 +268,8 @@ app_license = "mit"
 
 home_page = "index"
 
-web_include_css = "/assets/japanese_demo_website/css/website.css"
-web_include_js = "/assets/japanese_demo_website/js/website.js"
+web_include_css = "jdw_site.bundle.css"
+web_include_js = "jdw_site.bundle.js"
 
 website_route_rules = [
 	{"from_route": "/news/<slug>", "to_route": "news/article"},

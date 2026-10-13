@@ -16,7 +16,12 @@
 			</ul>
 		</nav>
 	</div>
-	<div class="container">
+	<div class="container site-footer__bottom">
 		<p class="site-footer__copy">&copy; 2026 {{ _("Minato Link Co., Ltd.") }}</p>
+		<div class="theme-switch" role="group" aria-label="{{ _('Display mode') }}">
+			{%- for value, label in (("light", _("Light")), ("dark", _("Dark")), ("auto", _("Auto"))) %}
+			<button class="theme-switch__option" type="button" data-theme-choice="{{ value }}" aria-pressed="false">{{ label }}</button>
+			{%- endfor %}
+		</div>
 	</div>
 </footer>

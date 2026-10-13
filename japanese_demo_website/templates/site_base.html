@@ -16,7 +16,19 @@
 	{%- for link in web_include_css %}
 	{{ include_style(link) }}
 	{%- endfor %}
-	<script>document.documentElement.classList.add("js"); window.frappe = window.frappe || {};</script>
+	<meta name="color-scheme" content="light dark">
+	<script>
+		// before first paint: apply a remembered theme so the page never flashes the wrong one
+		(() => {
+			const root = document.documentElement;
+			root.classList.add("js");
+			try {
+				const theme = localStorage.getItem("jdw-theme");
+				if (theme === "light" || theme === "dark") root.dataset.theme = theme;
+			} catch {}
+			window.frappe = window.frappe || {};
+		})();
+	</script>
 </head>
 <body>
 	<a class="skip-link" href="#main">{{ _("Skip to main content") }}</a>

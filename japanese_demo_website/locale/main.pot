@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Japanese Demo Website VERSION\n"
 "Report-Msgid-Bugs-To: tech@pixelcareconsulting.com\n"
-"POT-Creation-Date: 2026-10-13 07:16+0000\n"
-"PO-Revision-Date: 2026-10-13 07:16+0000\n"
+"POT-Creation-Date: 2026-10-13 07:54+0000\n"
+"PO-Revision-Date: 2026-10-13 07:54+0000\n"
 "Last-Translator: tech@pixelcareconsulting.com\n"
 "Language-Team: tech@pixelcareconsulting.com\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgid "50 million yen"
 msgstr ""
 
 #: japanese_demo_website/templates/includes/footer.html:7
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 #: japanese_demo_website/www/about.html:56
 #: japanese_demo_website/www/about.html:82
 msgid "5F Minato Building, 9-9-9 Konan, Minato-ku, Tokyo"
@@ -100,6 +100,11 @@ msgstr ""
 msgid "April 2012"
 msgstr ""
 
+#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/templates/site_base.html:40
+msgid "Auto"
+msgstr ""
+
 #: japanese_demo_website/www/news/article.html:19
 msgid "Back to news"
 msgstr ""
@@ -122,6 +127,7 @@ msgid "Business process consulting, system implementation and operations support
 msgstr ""
 
 #: japanese_demo_website/www/about.html:57
+#: japanese_demo_website/www/index.py:12
 msgid "Business process consulting, system implementation, operations support"
 msgstr ""
 
@@ -207,8 +213,18 @@ msgstr ""
 msgid "Content (Japanese)"
 msgstr ""
 
+#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/templates/site_base.html:40
+msgid "Dark"
+msgstr ""
+
 #: japanese_demo_website/www/services.html:36
 msgid "Data migration from spreadsheets and old systems"
+msgstr ""
+
+#: japanese_demo_website/templates/includes/footer.html:21
+#: japanese_demo_website/templates/site_base.html:40
+msgid "Display mode"
 msgstr ""
 
 #. Option for the 'Inquiry Type' (Select) field in DocType 'Inquiry'
@@ -261,7 +277,7 @@ msgid "Filter by category"
 msgstr ""
 
 #: japanese_demo_website/templates/includes/footer.html:11
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 msgid "Footer navigation"
 msgstr ""
 
@@ -381,12 +397,17 @@ msgstr ""
 #. Label of the language (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
 #: japanese_demo_website/templates/includes/header.html:19
-#: japanese_demo_website/templates/site_base.html:23
+#: japanese_demo_website/templates/site_base.html:35
 msgid "Language"
 msgstr ""
 
 #: japanese_demo_website/www/services.html:83
 msgid "Launch and support"
+msgstr ""
+
+#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/templates/site_base.html:40
+msgid "Light"
 msgstr ""
 
 #: japanese_demo_website/www/services.html:18
@@ -399,7 +420,7 @@ msgid "Lowercase letters, numbers and hyphens. The article is served at /news/&l
 msgstr ""
 
 #: japanese_demo_website/templates/includes/header.html:12
-#: japanese_demo_website/templates/site_base.html:23
+#: japanese_demo_website/templates/site_base.html:35
 msgid "Main navigation"
 msgstr ""
 
@@ -408,7 +429,7 @@ msgid "March 2020"
 msgstr ""
 
 #: japanese_demo_website/templates/includes/header.html:9
-#: japanese_demo_website/templates/site_base.html:23
+#: japanese_demo_website/templates/site_base.html:35
 msgid "Menu"
 msgstr ""
 
@@ -430,7 +451,7 @@ msgid "Message is required"
 msgstr ""
 
 #: japanese_demo_website/templates/includes/header.html:5
-#: japanese_demo_website/templates/site_base.html:23
+#: japanese_demo_website/templates/site_base.html:35
 msgid "Minato Link"
 msgstr ""
 
@@ -438,12 +459,12 @@ msgstr ""
 #: japanese_demo_website/templates/includes/footer.html:20
 #: japanese_demo_website/templates/site_base.html:6
 #: japanese_demo_website/templates/site_base.html:11
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 #: japanese_demo_website/www/about.html:51
 msgid "Minato Link Co., Ltd."
 msgstr ""
 
-#: japanese_demo_website/www/index.py:12
+#: japanese_demo_website/www/index.py:13
 msgid "Minato Link supports small and mid-sized companies in Japan with business process consulting, system implementation and ongoing operations support."
 msgstr ""
 
@@ -607,7 +628,7 @@ msgid "Please enter {0}."
 msgstr ""
 
 #: japanese_demo_website/templates/includes/footer.html:6
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 #: japanese_demo_website/www/about.html:56
 #: japanese_demo_website/www/about.html:82
 msgid "Postal code 108-0075"
@@ -700,7 +721,7 @@ msgstr ""
 msgid "Site language the visitor used when submitting"
 msgstr ""
 
-#: japanese_demo_website/templates/site_base.html:22
+#: japanese_demo_website/templates/site_base.html:34
 msgid "Skip to main content"
 msgstr ""
 
@@ -766,7 +787,7 @@ msgstr ""
 
 #: japanese_demo_website/templates/includes/contact_band.html:8
 #: japanese_demo_website/templates/includes/footer.html:8
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 #: japanese_demo_website/www/index.html:73
 #: japanese_demo_website/www/services.html:90
 msgid "Tel: 03-1234-5678 (Weekdays 9:00 to 18:00)"

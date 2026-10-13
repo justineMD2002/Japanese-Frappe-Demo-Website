@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Japanese Demo Website VERSION\n"
 "Report-Msgid-Bugs-To: tech@pixelcareconsulting.com\n"
-"POT-Creation-Date: 2026-10-13 07:16+0000\n"
-"PO-Revision-Date: 2026-10-13 07:16+0000\n"
+"POT-Creation-Date: 2026-10-13 07:54+0000\n"
+"PO-Revision-Date: 2026-10-13 07:54+0000\n"
 "Last-Translator: tech@pixelcareconsulting.com\n"
 "Language-Team: tech@pixelcareconsulting.com\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid "50 million yen"
 msgstr "5,000万円"
 
 #: japanese_demo_website/templates/includes/footer.html:7
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 #: japanese_demo_website/www/about.html:56
 #: japanese_demo_website/www/about.html:82
 msgid "5F Minato Building, 9-9-9 Konan, Minato-ku, Tokyo"
@@ -102,6 +102,11 @@ msgstr "みなとリンクからのお知らせ、プレスリリース、イベ
 msgid "April 2012"
 msgstr "2012年4月"
 
+#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/templates/site_base.html:40
+msgid "Auto"
+msgstr "自動"
+
 #: japanese_demo_website/www/news/article.html:19
 msgid "Back to news"
 msgstr "ニュース一覧へ戻る"
@@ -124,6 +129,7 @@ msgid "Business process consulting, system implementation and operations support
 msgstr "業務改善コンサルティング、システム導入支援、運用保守サポートのご紹介と、ご相談から稼働までの流れをご案内します。"
 
 #: japanese_demo_website/www/about.html:57
+#: japanese_demo_website/www/index.py:12
 msgid "Business process consulting, system implementation, operations support"
 msgstr "業務改善コンサルティング、システム導入支援、運用保守サポート"
 
@@ -209,9 +215,19 @@ msgstr "本文（英語）"
 msgid "Content (Japanese)"
 msgstr "本文（日本語）"
 
+#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/templates/site_base.html:40
+msgid "Dark"
+msgstr "ダーク"
+
 #: japanese_demo_website/www/services.html:36
 msgid "Data migration from spreadsheets and old systems"
 msgstr "Excelや旧システムからのデータ移行"
+
+#: japanese_demo_website/templates/includes/footer.html:21
+#: japanese_demo_website/templates/site_base.html:40
+msgid "Display mode"
+msgstr "表示モード"
 
 #. Option for the 'Inquiry Type' (Select) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
@@ -263,7 +279,7 @@ msgid "Filter by category"
 msgstr "カテゴリで絞り込む"
 
 #: japanese_demo_website/templates/includes/footer.html:11
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 msgid "Footer navigation"
 msgstr "フッターナビゲーション"
 
@@ -383,13 +399,18 @@ msgstr "代表取締役社長　田中 健司"
 #. Label of the language (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
 #: japanese_demo_website/templates/includes/header.html:19
-#: japanese_demo_website/templates/site_base.html:23
+#: japanese_demo_website/templates/site_base.html:35
 msgid "Language"
 msgstr "言語"
 
 #: japanese_demo_website/www/services.html:83
 msgid "Launch and support"
 msgstr "稼働・サポート"
+
+#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/templates/site_base.html:40
+msgid "Light"
+msgstr "ライト"
 
 #: japanese_demo_website/www/services.html:18
 msgid "List of issues with an estimate of the time each one costs"
@@ -401,7 +422,7 @@ msgid "Lowercase letters, numbers and hyphens. The article is served at /news/&l
 msgstr "半角英小文字・数字・ハイフンのみ使用できます。記事は /news/&lt;slug&gt; で公開されます。"
 
 #: japanese_demo_website/templates/includes/header.html:12
-#: japanese_demo_website/templates/site_base.html:23
+#: japanese_demo_website/templates/site_base.html:35
 msgid "Main navigation"
 msgstr "メインナビゲーション"
 
@@ -410,7 +431,7 @@ msgid "March 2020"
 msgstr "2020年3月"
 
 #: japanese_demo_website/templates/includes/header.html:9
-#: japanese_demo_website/templates/site_base.html:23
+#: japanese_demo_website/templates/site_base.html:35
 msgid "Menu"
 msgstr "メニュー"
 
@@ -432,7 +453,7 @@ msgid "Message is required"
 msgstr "お問い合わせ内容は必須です"
 
 #: japanese_demo_website/templates/includes/header.html:5
-#: japanese_demo_website/templates/site_base.html:23
+#: japanese_demo_website/templates/site_base.html:35
 msgid "Minato Link"
 msgstr "みなとリンク"
 
@@ -440,12 +461,12 @@ msgstr "みなとリンク"
 #: japanese_demo_website/templates/includes/footer.html:20
 #: japanese_demo_website/templates/site_base.html:6
 #: japanese_demo_website/templates/site_base.html:11
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 #: japanese_demo_website/www/about.html:51
 msgid "Minato Link Co., Ltd."
 msgstr "株式会社みなとリンク"
 
-#: japanese_demo_website/www/index.py:12
+#: japanese_demo_website/www/index.py:13
 msgid "Minato Link supports small and mid-sized companies in Japan with business process consulting, system implementation and ongoing operations support."
 msgstr "株式会社みなとリンクは、業務改善コンサルティング、システム導入支援、運用保守サポートを通じて、中小企業の皆さまの業務を支えています。"
 
@@ -609,7 +630,7 @@ msgid "Please enter {0}."
 msgstr "{0}を入力してください。"
 
 #: japanese_demo_website/templates/includes/footer.html:6
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 #: japanese_demo_website/www/about.html:56
 #: japanese_demo_website/www/about.html:82
 msgid "Postal code 108-0075"
@@ -702,7 +723,7 @@ msgstr "当社は2012年の創業以来、紙の帳票や電話、Excelに頼っ
 msgid "Site language the visitor used when submitting"
 msgstr "送信時に訪問者が使用していたサイトの言語"
 
-#: japanese_demo_website/templates/site_base.html:22
+#: japanese_demo_website/templates/site_base.html:34
 msgid "Skip to main content"
 msgstr "本文へスキップ"
 
@@ -768,7 +789,7 @@ msgstr "業務のお悩み、まずはご相談ください"
 
 #: japanese_demo_website/templates/includes/contact_band.html:8
 #: japanese_demo_website/templates/includes/footer.html:8
-#: japanese_demo_website/templates/site_base.html:28
+#: japanese_demo_website/templates/site_base.html:40
 #: japanese_demo_website/www/index.html:73
 #: japanese_demo_website/www/services.html:90
 msgid "Tel: 03-1234-5678 (Weekdays 9:00 to 18:00)"

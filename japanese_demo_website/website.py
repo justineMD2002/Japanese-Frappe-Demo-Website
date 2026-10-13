@@ -21,7 +21,7 @@ def site_nav(active_route: str | None = None) -> list[dict]:
 
 
 def lang_switch_url(lang: str) -> str:
-	"""No-JS fallback for the language toggle; website.js swaps this for a cookie + reload."""
+	"""No-JS fallback for the language toggle; jdw_site.bundle.js swaps this for a cookie + reload."""
 	path = frappe.local.request.path if getattr(frappe.local, "request", None) else "/"
 	return f"{path}?_lang={lang}"
 

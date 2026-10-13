@@ -6,6 +6,7 @@
 	const LANGUAGE_COOKIE = "preferred_language";
 	const COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 365;
 	const REQUEST_TIMEOUT_MS = 15000;
+	const THEME_STORAGE_KEY = "jdw-theme"; // also read by the pre-paint script in site_base.html
 
 	function initNavToggle() {
 		const toggle = document.querySelector(".nav-toggle");
@@ -23,6 +24,36 @@
 				toggle.focus();
 			}
 		});
+	}
+
+	// "auto" (nothing stored) follows the OS; "light"/"dark" are stored and override it.
+	function initThemeSwitch() {
+		const options = document.querySelectorAll(".theme-switch__option[data-theme-choice]");
+		if (!options.length) return;
+
+		const root = document.documentElement;
+		const sync = () => {
+			const current = root.dataset.theme || "auto";
+			options.forEach((option) => {
+				option.setAttribute("aria-pressed", String(option.dataset.themeChoice === current));
+			});
+		};
+
+		options.forEach((option) => {
+			option.addEventListener("click", () => {
+				const choice = option.dataset.themeChoice;
+				if (choice === "auto") delete root.dataset.theme;
+				else root.dataset.theme = choice;
+				try {
+					if (choice === "auto") localStorage.removeItem(THEME_STORAGE_KEY);
+					else localStorage.setItem(THEME_STORAGE_KEY, choice);
+				} catch {
+					// storage blocked (private mode): the choice lasts for this page only
+				}
+				sync();
+			});
+		});
+		sync();
 	}
 
 	// The links work without JS (?_lang=xx for one page); with JS the choice is remembered site-wide.
@@ -165,6 +196,7 @@
 	}
 
 	initNavToggle();
+	initThemeSwitch();
 	initLanguageSwitch();
 	initInquiryForm();
 })();
