@@ -5,7 +5,17 @@ import datetime
 import frappe
 from frappe.utils import getdate
 
-from japanese_demo_website.constants import DEFAULT_LANGUAGE, NAV_ITEMS, SITE_LANGUAGES, STATUS_LABELS
+from japanese_demo_website.constants import (
+	COMPANY,
+	DEFAULT_LANGUAGE,
+	IMAGE_BASE,
+	IMAGE_WIDTHS,
+	NAV_ITEMS,
+	NEWS_FALLBACK_IMAGE,
+	SERVICES,
+	SITE_LANGUAGES,
+	STATUS_LABELS,
+)
 
 
 def site_lang() -> str:
@@ -18,6 +28,35 @@ def site_nav(active_route: str | None = None) -> list[dict]:
 		{"route": item["route"], "label": str(item["label"]), "is_active": item["route"] == active_route}
 		for item in NAV_ITEMS
 	]
+
+
+def company() -> dict:
+	return {
+		**COMPANY,
+		"address": str(COMPANY["address"]),
+		"address_en": COMPANY["address"].msg,  # mailing address, always in English
+	}
+
+
+def site_services() -> list[dict]:
+	return [
+		{
+			"key": service["key"],
+			"title": str(service["title"]),
+			"summary": str(service["summary"]),
+			"description": str(service["description"]),
+			"points": [str(point) for point in service["points"]],
+		}
+		for service in SERVICES
+	]
+
+
+def site_image(name: str, width: int = 960) -> str:
+	return f"{IMAGE_BASE}/{name}-{width}.webp"
+
+
+def site_image_srcset(name: str) -> str:
+	return ", ".join(f"{site_image(name, width)} {width}w" for width in IMAGE_WIDTHS)
 
 
 def lang_switch_url(lang: str) -> str:
@@ -58,7 +97,7 @@ def set_page_meta(context, title: str, description: str, active_route: str | Non
 	context.metatags = {"description": description}
 
 
-NEWS_LIST_FIELDS = ["name", "title", "title_en", "summary", "summary_en", "category", "published_on"]
+NEWS_LIST_FIELDS = ["name", "title", "title_en", "summary", "summary_en", "category", "published_on", "image"]
 
 
 def get_published_news(limit: int, start: int = 0, category: str | None = None) -> list[dict]:
@@ -92,4 +131,6 @@ def to_news_item(row: dict) -> dict:
 		summary=localized(row, "summary"),
 		category=row["category"],
 		published_on=row["published_on"],
+		# Desk uploads (/files/...) are used as-is; without one the shared fallback photo is shown
+		image=row.get("image") or site_image(NEWS_FALLBACK_IMAGE),
 	)

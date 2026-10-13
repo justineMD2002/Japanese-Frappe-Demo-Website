@@ -1,37 +1,29 @@
 {% extends "japanese_demo_website/templates/site_base.html" %}
-{% from "japanese_demo_website/templates/includes/macros.html" import news_rows %}
+{% from "japanese_demo_website/templates/includes/macros.html" import photo, news_cards %}
 
 {% block content %}
 <section class="hero">
+	{{ photo("hero", "", "100vw", "hero__image", eager=True) }}
 	<div class="container hero__inner">
 		<div class="hero__copy">
 			<h1 class="hero__title">{{ _("Systems that fit the way your business already works.") }}</h1>
-			<p class="hero__lead">{{ _("We help small and mid-sized companies replace paper and spreadsheets in ordering, inventory and billing, from the first review of your current process to support after launch.") }}</p>
+			<p class="hero__lead">{{ _("We implement ERPNext, connect SAP Business One with the rest of your tools, build custom web applications and automate routine work, from reviewing your current process to support after launch.") }}</p>
 			<div class="button-row">
 				<a class="button button--primary" href="/contact">{{ _("Contact us") }}</a>
-				<a class="button button--secondary" href="/services">{{ _("See our services") }}</a>
+				<a class="button button--ghost" href="/services">{{ _("See our services") }}</a>
 			</div>
 		</div>
-		<dl class="facts">
-			<div class="facts__item">
-				<dt>{{ _("Founded") }}</dt>
-				<dd>{{ _("April 2012") }}</dd>
-			</div>
-			<div class="facts__item">
-				<dt>{{ _("Client companies") }}</dt>
-				<dd>{{ _("320+ companies") }}</dd>
-			</div>
-			<div class="facts__item">
-				<dt>{{ _("Employees") }}</dt>
-				<dd>{{ _("48 people") }}</dd>
-			</div>
-			<div class="facts__item">
-				<dt>{{ _("Offices") }}</dt>
-				<dd>{{ _("Tokyo, Osaka") }}</dd>
-			</div>
-		</dl>
 	</div>
 </section>
+
+<nav class="focus-band" aria-label="{{ _('Our services') }}">
+	<ul class="container focus-band__list">
+		<li><a class="focus-band__link" href="/services#service-erp"><span class="focus-band__number">01</span>{{ _("ERPNext / Frappe") }}</a></li>
+		<li><a class="focus-band__link" href="/services#service-sap"><span class="focus-band__number">02</span>{{ _("SAP Business One") }}</a></li>
+		<li><a class="focus-band__link" href="/services#service-dev"><span class="focus-band__number">03</span>{{ _("Web and app development") }}</a></li>
+		<li><a class="focus-band__link" href="/services#service-ai"><span class="focus-band__number">04</span>{{ _("AI and automation") }}</a></li>
+	</ul>
+</nav>
 
 <section class="section" aria-labelledby="home-news-heading">
 	<div class="container">
@@ -40,7 +32,7 @@
 			<a class="text-link" href="/news">{{ _("View all news") }}</a>
 		</div>
 		{% if latest_news %}
-		{{ news_rows(latest_news) }}
+		{{ news_cards(latest_news) }}
 		{% else %}
 		<p class="empty-state">{{ _("There are no announcements at the moment.") }}</p>
 		{% endif %}
@@ -53,19 +45,19 @@
 			<h2 class="section__title" id="home-services-heading">{{ _("Services") }}</h2>
 			<a class="text-link" href="/services">{{ _("Service details") }}</a>
 		</div>
-		<ol class="numbered-list">
-			<li class="numbered-list__item">
-				<h3 class="numbered-list__title">{{ _("Business process consulting") }}</h3>
-				<p>{{ _("We map how orders, stock and invoices move through your company today and agree with you on what to change first.") }}</p>
+		<ol class="service-rows">
+			{%- for service in site_services() %}
+			<li class="service-row">
+				<a class="service-row__link" href="/services#service-{{ service.key }}">
+					<span class="service-row__media">{{ photo("service-" ~ service.key, "", "(min-width: 768px) 240px, 112px") }}</span>
+					<span class="service-row__text">
+						<span class="service-row__number" aria-hidden="true">{{ "%02d" | format(loop.index) }}</span>
+						<span class="service-row__title">{{ service.title }}</span>
+						<span class="service-row__body">{{ service.summary }}</span>
+					</span>
+				</a>
 			</li>
-			<li class="numbered-list__item">
-				<h3 class="numbered-list__title">{{ _("System implementation") }}</h3>
-				<p>{{ _("We configure and connect business systems, migrate your existing data and train the people who will use them.") }}</p>
-			</li>
-			<li class="numbered-list__item">
-				<h3 class="numbered-list__title">{{ _("Operations support") }}</h3>
-				<p>{{ _("After launch we answer questions, handle changes and keep the system running, with a named contact for your company.") }}</p>
-			</li>
+			{%- endfor %}
 		</ol>
 	</div>
 </section>

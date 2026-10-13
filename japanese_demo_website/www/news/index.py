@@ -12,7 +12,7 @@ def get_context(context):
 	set_page_meta(
 		context,
 		title=_("News"),
-		description=_("Announcements, press releases and events from Minato Link."),
+		description=_("Announcements, press releases and events from Pixelcare Consulting."),
 		active_route="/news",
 	)
 

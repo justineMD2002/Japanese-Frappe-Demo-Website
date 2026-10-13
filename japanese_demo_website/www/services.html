@@ -1,65 +1,31 @@
 {% extends "japanese_demo_website/templates/site_base.html" %}
-{% from "japanese_demo_website/templates/includes/macros.html" import page_heading %}
+{% from "japanese_demo_website/templates/includes/macros.html" import page_heading, photo %}
 
 {% block content %}
-{{ page_heading(_("Services"), _("Three services that cover a project from planning to day-to-day operation. You can use them together or on their own.")) }}
+{{ page_heading(_("Services"), _("Four services that cover a project from planning to day-to-day operation. You can use them together or on their own."), "banner-services") }}
 
-<section class="section" aria-labelledby="service-consulting">
-	<div class="container service">
-		<div class="service__head">
-			<p class="service__number" aria-hidden="true">01</p>
-			<h2 class="section__title" id="service-consulting">{{ _("Business process consulting") }}</h2>
+{%- for service in site_services() %}
+<section class="section{% if loop.index is even %} section--muted{% endif %}" id="service-{{ service.key }}" aria-labelledby="service-{{ service.key }}-title">
+	<div class="container feature{% if loop.index is even %} feature--reverse{% endif %}">
+		<div class="feature__media">
+			{{ photo("service-" ~ service.key, "", "(min-width: 960px) 480px, 100vw") }}
 		</div>
-		<div class="service__body">
-			<p>{{ _("We interview the people doing the work, follow documents through your company and write down where time is lost. You receive a short report with the changes we recommend, in order of impact.") }}</p>
+		<div class="feature__body">
+			<p class="feature__number" aria-hidden="true">{{ "%02d" | format(loop.index) }}</p>
+			<h2 class="feature__title" id="service-{{ service.key }}-title">{{ service.title }}</h2>
+			<p>{{ service.description }}</p>
 			<h3 class="subheading">{{ _("What we cover") }}</h3>
 			<ul class="check-list">
-				<li>{{ _("Review of order, inventory, purchasing and billing processes") }}</li>
-				<li>{{ _("List of issues with an estimate of the time each one costs") }}</li>
-				<li>{{ _("Improvement plan and budget") }}</li>
+				{%- for point in service.points %}
+				<li>{{ point }}</li>
+				{%- endfor %}
 			</ul>
 		</div>
 	</div>
 </section>
+{%- endfor %}
 
-<section class="section section--muted" aria-labelledby="service-implementation">
-	<div class="container service">
-		<div class="service__head">
-			<p class="service__number" aria-hidden="true">02</p>
-			<h2 class="section__title" id="service-implementation">{{ _("System implementation") }}</h2>
-		</div>
-		<div class="service__body">
-			<p>{{ _("We set up the system to match the agreed process, connect it to your accounting software and existing tools, and move your data across. Staff training is part of every project.") }}</p>
-			<h3 class="subheading">{{ _("What we cover") }}</h3>
-			<ul class="check-list">
-				<li>{{ _("System configuration and custom screens") }}</li>
-				<li>{{ _("Data migration from spreadsheets and old systems") }}</li>
-				<li>{{ _("Integration with accounting and e-commerce systems") }}</li>
-				<li>{{ _("Training sessions and Japanese user manuals") }}</li>
-			</ul>
-		</div>
-	</div>
-</section>
-
-<section class="section" aria-labelledby="service-support">
-	<div class="container service">
-		<div class="service__head">
-			<p class="service__number" aria-hidden="true">03</p>
-			<h2 class="section__title" id="service-support">{{ _("Operations support") }}</h2>
-		</div>
-		<div class="service__body">
-			<p>{{ _("After launch, a named contact handles your questions and change requests. We monitor the system and report on its use every month.") }}</p>
-			<h3 class="subheading">{{ _("What we cover") }}</h3>
-			<ul class="check-list">
-				<li>{{ _("Help desk by phone and email on business days") }}</li>
-				<li>{{ _("Small changes to screens, reports and forms") }}</li>
-				<li>{{ _("Monthly usage report and review meeting") }}</li>
-			</ul>
-		</div>
-	</div>
-</section>
-
-<section class="section section--muted" aria-labelledby="flow-heading">
+<section class="section" aria-labelledby="flow-heading">
 	<div class="container">
 		<h2 class="section__title" id="flow-heading">{{ _("How a project runs") }}</h2>
 		<ol class="flow">
@@ -69,11 +35,11 @@
 			</li>
 			<li class="flow__step">
 				<h3 class="flow__title">{{ _("Hearing") }}</h3>
-				<p>{{ _("We visit or meet online to understand your current process.") }}</p>
+				<p>{{ _("We meet online to understand your current process and systems.") }}</p>
 			</li>
 			<li class="flow__step">
 				<h3 class="flow__title">{{ _("Proposal and quote") }}</h3>
-				<p>{{ _("You receive a written plan, schedule and fixed quote.") }}</p>
+				<p>{{ _("You receive a written proposal, schedule and quote.") }}</p>
 			</li>
 			<li class="flow__step">
 				<h3 class="flow__title">{{ _("Implementation") }}</h3>

@@ -6,7 +6,8 @@
 {%- endmacro %}
 
 {% block content %}
-{{ page_heading(_("Contact"), _("Fill in the form below and we will reply by email, usually within two business days. For urgent matters, please call us.")) }}
+{%- set org = company() %}
+{{ page_heading(_("Contact"), _("Fill in the form below and we will reply by email. For urgent matters, please call us."), "banner-contact") }}
 
 <section class="section section--tight">
 	<div class="container contact-layout">
@@ -58,7 +59,7 @@
 					</div>
 					<div class="field">
 						<label class="field__label" for="phone">{{ _("Phone number") }}</label>
-						<input class="field__input" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="{{ max_lengths.phone }}" placeholder="03-1234-5678">
+						<input class="field__input" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="{{ max_lengths.phone }}" placeholder="+81 3-1234-5678">
 					</div>
 				</div>
 
@@ -97,7 +98,7 @@
 
 			<div class="form-success" id="inquiry-success" tabindex="-1" hidden>
 				<h2 class="form-success__title">{{ _("Thank you for your inquiry.") }}</h2>
-				<p>{{ _("We have received your message and will reply by email within two business days.") }}</p>
+				<p>{{ _("We have received your message and will reply by email.") }}</p>
 				<p>{{ _("Reference number:") }} <strong id="inquiry-reference"></strong></p>
 				<a class="text-link" href="/">{{ _("Back to the home page") }}</a>
 			</div>
@@ -105,8 +106,8 @@
 
 		<aside class="contact-layout__aside" aria-labelledby="phone-heading">
 			<h2 class="subheading" id="phone-heading">{{ _("Contact by phone") }}</h2>
-			<p class="contact-phone">03-1234-5678</p>
-			<p class="muted">{{ _("Weekdays 9:00 to 18:00, except national holidays and the year-end holidays.") }}</p>
+			<p class="contact-phone"><a href="tel:{{ org.phone_tel }}">{{ org.phone_display }}</a></p>
+			<p class="muted">{{ _("Weekdays 9:00 to 18:00 (Philippine time)") }}<br>{{ _("Japan time 10:00 to 19:00") }}</p>
 		</aside>
 	</div>
 </section>

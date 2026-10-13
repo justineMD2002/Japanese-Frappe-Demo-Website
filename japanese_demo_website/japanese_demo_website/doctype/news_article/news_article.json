@@ -12,6 +12,7 @@
   "category",
   "published_on",
   "published",
+  "image",
   "section_ja",
   "summary",
   "content",
@@ -76,6 +77,12 @@
    "label": "Published"
   },
   {
+   "description": "Shown on the news list and article page. A standard photo is used when empty. Landscape, at least 960px wide.",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
    "fieldname": "section_ja",
    "fieldtype": "Section Break",
    "label": "Japanese"
@@ -110,9 +117,10 @@
    "label": "Content (English)"
   }
  ],
+ "image_field": "image",
  "index_web_pages_for_search": 0,
  "links": [],
- "modified": "2026-10-13 10:00:00.000000",
+ "modified": "2026-10-13 18:00:00.000000",
  "modified_by": "Administrator",
  "module": "Japanese Demo Website",
  "name": "News Article",

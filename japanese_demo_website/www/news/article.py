@@ -18,6 +18,7 @@ def get_context(context):
 			"content_en",
 			"category",
 			"published_on",
+			"image",
 		],
 		as_dict=True,
 	)

@@ -1,10 +1,39 @@
-{% macro page_heading(heading, lead=None) %}
-<div class="page-heading">
-	<div class="container">
+{# Responsive photo from public/images. Pass alt="" for decorative images. #}
+{% macro photo(name, alt, sizes="100vw", class_name="", eager=False) -%}
+<img class="{{ class_name }}" src="{{ site_image(name) }}" srcset="{{ site_image_srcset(name) }}" sizes="{{ sizes }}" width="960" height="640" alt="{{ alt }}"{% if eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+{%- endmacro %}
+
+{% macro page_heading(heading, lead=None, image=None) %}
+<div class="page-heading{% if image %} page-heading--photo{% endif %}">
+	{%- if image %}
+	{{ photo(image, "", "100vw", "page-heading__image", eager=True) }}
+	{%- endif %}
+	<div class="container page-heading__inner">
 		<h1 class="page-heading__title">{{ heading }}</h1>
 		{% if lead %}<p class="page-heading__lead">{{ lead }}</p>{% endif %}
 	</div>
 </div>
+{% endmacro %}
+
+{% macro news_meta(article) -%}
+<span class="news-meta">
+	<time datetime="{{ article.published_on }}">{{ article.published_on | site_date }}</time>
+	<span class="tag tag--{{ article.category | lower }}">{{ article.category | status_label }}</span>
+</span>
+{%- endmacro %}
+
+{% macro news_cards(articles) %}
+<ul class="news-cards">
+	{%- for article in articles %}
+	<li>
+		<a class="news-card" href="{{ article.route }}">
+			<span class="news-card__media"><img src="{{ article.image }}" alt="" width="960" height="640" loading="lazy" decoding="async"></span>
+			{{ news_meta(article) }}
+			<span class="news-card__title">{{ article.title | e }}</span>
+		</a>
+	</li>
+	{%- endfor %}
+</ul>
 {% endmacro %}
 
 {% macro news_rows(articles) %}
@@ -12,11 +41,12 @@
 	{%- for article in articles %}
 	<li class="news-list__item">
 		<a class="news-list__link" href="{{ article.route }}">
-			<span class="news-list__meta">
-				<time datetime="{{ article.published_on }}">{{ article.published_on | site_date }}</time>
-				<span class="tag tag--{{ article.category | lower }}">{{ article.category | status_label }}</span>
+			<span class="news-list__media"><img src="{{ article.image }}" alt="" width="960" height="640" loading="lazy" decoding="async"></span>
+			<span class="news-list__text">
+				{{ news_meta(article) }}
+				<span class="news-list__title">{{ article.title | e }}</span>
+				{% if article.summary %}<span class="news-list__summary">{{ article.summary | e }}</span>{% endif %}
 			</span>
-			<span class="news-list__title">{{ article.title | e }}</span>
 		</a>
 	</li>
 	{%- endfor %}

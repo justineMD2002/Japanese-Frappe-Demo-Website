@@ -284,6 +284,10 @@ jinja = {
 		"japanese_demo_website.website.site_lang",
 		"japanese_demo_website.website.lang_switch_url",
 		"japanese_demo_website.website.localized",
+		"japanese_demo_website.website.company",
+		"japanese_demo_website.website.site_services",
+		"japanese_demo_website.website.site_image",
+		"japanese_demo_website.website.site_image_srcset",
 	],
 	"filters": [
 		"japanese_demo_website.website.site_date",

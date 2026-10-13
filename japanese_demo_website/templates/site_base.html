@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{% block title %}{% if title %}{{ title }} | {% endif %}{{ _("Minato Link Co., Ltd.") }}{% endblock %}</title>
+	<title>{% block title %}{% if title %}{{ title }} | {% endif %}{{ _("Pixelcare Consulting") }}{% endblock %}</title>
 	{%- if metatags and metatags.description %}
 	<meta name="description" content="{{ metatags.description }}">
 	<meta property="og:description" content="{{ metatags.description }}">
 	{%- endif %}
-	<meta property="og:title" content="{{ title or _('Minato Link Co., Ltd.') }}">
+	<meta property="og:title" content="{{ title or _("Pixelcare Consulting") }}">
 	<meta property="og:locale" content="{{ 'ja_JP' if site_lang() == 'ja' else 'en_US' }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

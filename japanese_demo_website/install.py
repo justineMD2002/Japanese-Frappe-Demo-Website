@@ -11,104 +11,68 @@ from japanese_demo_website.constants import (
 	INQUIRY_STATUS_IN_PROGRESS,
 	INQUIRY_STATUS_NEW,
 )
+from japanese_demo_website.website import site_image
 
 NEWS_ARTICLES = [
 	{
-		"slug": "new-osaka-office",
+		"slug": "website-launch",
 		"category": "ANNOUNCEMENT",
 		"published_on": "2026-10-01",
-		"title": "大阪営業所を開設しました",
-		"title_en": "We have opened our Osaka office",
-		"summary": "関西エリアのお客様へのサポート体制を強化するため、2026年10月1日に大阪営業所を開設しました。",
-		"summary_en": "To support our customers in the Kansai region more closely, we opened our Osaka office on October 1, 2026.",
+		"image": site_image("news-website"),
+		"title": "日本語ウェブサイトを公開しました",
+		"title_en": "Our Japanese website is now live",
+		"summary": "日本のお客様に当社のサービスをより詳しくご紹介するため、日本語のウェブサイトを公開しました。",
+		"summary_en": "We have launched a Japanese website to introduce our services to customers in Japan.",
 		"content": (
-			"<p>平素より格別のご高配を賜り、厚く御礼申し上げます。</p>"
-			"<p>このたび、関西エリアのお客様へのサポート体制を強化するため、大阪営業所を開設いたしました。"
-			"訪問でのご相談や導入後のサポートを、これまで以上に迅速にご提供してまいります。</p>"
-			"<p>所在地：大阪府大阪市北区梅田1-2-3 梅田ビジネスタワー8階<br>業務開始日：2026年10月1日</p>"
-			"<p>今後とも変わらぬお引き立てを賜りますよう、よろしくお願い申し上げます。</p>"
+			"<p>このたび、日本のお客様に向けて当社ウェブサイトの日本語版を公開いたしました。</p>"
+			"<p>ERPNext・Frappeの導入、SAP Business Oneとの連携、Web・アプリ開発、AIによる業務自動化について、"
+			"サービス内容やご相談の流れをご紹介しています。</p>"
+			"<p>ご質問やご相談は、お問い合わせフォームよりお気軽にお寄せください。</p>"
 		),
 		"content_en": (
-			"<p>Thank you for your continued support.</p>"
-			"<p>We have opened an office in Osaka so that we can support customers in the Kansai region "
-			"more closely, with faster on-site consultations and after-launch support.</p>"
-			"<p>Address: 8F Umeda Business Tower, 1-2-3 Umeda, Kita-ku, Osaka<br>Open from: October 1, 2026</p>"
+			"<p>We have launched a Japanese version of our website for customers in Japan.</p>"
+			"<p>It introduces our ERPNext and Frappe implementation, SAP Business One integration, "
+			"web and app development and AI automation services, and how a project with us runs.</p>"
+			"<p>If you have any questions, please contact us through the contact form.</p>"
 		),
 	},
 	{
 		"slug": "year-end-holidays-2026",
 		"category": "ANNOUNCEMENT",
 		"published_on": "2026-09-20",
+		"image": site_image("news-holiday"),
 		"title": "年末年始休業期間のお知らせ",
-		"title_en": "Year-end and New Year holiday schedule",
-		"summary": "2026年12月27日（日）から2027年1月4日（月）まで休業いたします。",
-		"summary_en": "Our offices will be closed from Sunday, December 27, 2026 to Monday, January 4, 2027.",
+		"title_en": "Year-end holiday schedule",
+		"summary": "2026年12月24日（木）から2027年1月1日（金）まで休業いたします。",
+		"summary_en": "Our office will be closed from Thursday, December 24, 2026 to Friday, January 1, 2027.",
 		"content": (
 			"<p>誠に勝手ながら、下記の期間を年末年始休業とさせていただきます。</p>"
-			"<p>休業期間：2026年12月27日（日）〜2027年1月4日（月）</p>"
-			"<p>休業期間中にいただいたお問い合わせは、1月5日（火）以降に順次ご回答いたします。"
+			"<p>休業期間：2026年12月24日（木）〜2027年1月1日（金）</p>"
+			"<p>休業期間中にいただいたお問い合わせは、1月4日（月）以降に順次ご回答いたします。"
 			"ご不便をおかけいたしますが、何卒ご了承くださいますようお願い申し上げます。</p>"
 		),
 		"content_en": (
-			"<p>Our offices will be closed from Sunday, December 27, 2026 to Monday, January 4, 2027.</p>"
-			"<p>We will reply to inquiries received during this period in order from Tuesday, January 5.</p>"
+			"<p>Our office will be closed from Thursday, December 24, 2026 to Friday, January 1, 2027.</p>"
+			"<p>We will reply to inquiries received during this period in order from Monday, January 4.</p>"
 		),
 	},
 	{
-		"slug": "dx-seminar-november",
+		"slug": "sample-erpnext-seminar",
 		"category": "EVENT",
 		"published_on": "2026-09-05",
-		"title": "11月開催「中小企業のための業務デジタル化セミナー」のご案内",
-		"title_en": "November seminar: digitizing everyday operations for small businesses",
-		"summary": "受発注や在庫管理の紙・Excel運用を見直すための無料セミナーを、11月12日に東京とオンラインで開催します。",
-		"summary_en": "A free seminar on moving order and inventory work off paper and spreadsheets, held on November 12 in Tokyo and online.",
+		"image": site_image("news-seminar"),
+		"title": "【サンプル】ERPNext導入の進め方 オンラインセミナー",
+		"title_en": "[Sample] Online seminar: how an ERPNext project runs",
+		"summary": "これはデモ用のサンプル記事です。イベント情報もDeskから登録・編集できます。",
+		"summary_en": "This is a sample article for the demo. Events can also be added and edited in Desk.",
 		"content": (
-			"<p>受発注・在庫・請求などの業務を、紙やExcelから無理なくシステムへ移行する進め方を、"
-			"導入事例を交えてご紹介します。</p>"
-			"<p>日時：2026年11月12日（木）14:00〜15:30<br>会場：本社セミナールーム（オンライン同時配信）<br>参加費：無料</p>"
-			"<p>お申し込みはお問い合わせフォームより「その他」を選択のうえ、セミナー参加希望とご記入ください。</p>"
+			"<p>これはデモ用のサンプル記事です。実際のイベントではありません。</p>"
+			"<p>ニュース記事はFrappeのDesk画面から、日本語・英語の本文や画像、公開日、公開状態を編集できます。</p>"
 		),
 		"content_en": (
-			"<p>We will show, with real examples, how to move order, inventory and billing work from paper "
-			"and spreadsheets to a system without disrupting daily operations.</p>"
-			"<p>Date: Thursday, November 12, 2026, 14:00 to 15:30<br>Venue: Head office seminar room "
-			"(also streamed online)<br>Fee: Free</p>"
-			'<p>To register, use the contact form, choose "Other" and mention the seminar.</p>'
-		),
-	},
-	{
-		"slug": "iso27001-certification",
-		"category": "PRESS_RELEASE",
-		"published_on": "2026-07-15",
-		"title": "情報セキュリティマネジメントシステム（ISO/IEC 27001）の認証を取得しました",
-		"title_en": "We have obtained ISO/IEC 27001 certification",
-		"summary": "お客様の情報を安全に取り扱う体制が第三者機関により認められ、ISO/IEC 27001の認証を取得しました。",
-		"summary_en": "An independent body has certified that our information security management meets ISO/IEC 27001.",
-		"content": (
-			"<p>当社は、情報セキュリティマネジメントシステムの国際規格であるISO/IEC 27001の認証を取得いたしました。</p>"
-			"<p>今後も、お客様からお預かりする情報の適切な管理と継続的な改善に努めてまいります。</p>"
-		),
-		"content_en": (
-			"<p>We have been certified to ISO/IEC 27001, the international standard for information "
-			"security management systems.</p>"
-			"<p>We will keep improving how we protect the information our customers entrust to us.</p>"
-		),
-	},
-	{
-		"slug": "website-renewal",
-		"category": "ANNOUNCEMENT",
-		"published_on": "2026-06-01",
-		"title": "ウェブサイトをリニューアルしました",
-		"title_en": "Our website has been redesigned",
-		"summary": "より見やすく、必要な情報にすぐたどり着けるよう、ウェブサイトを全面的にリニューアルしました。",
-		"summary_en": "We have redesigned our website so that the information you need is easier to find.",
-		"content": (
-			"<p>このたび、当社ウェブサイトを全面的にリニューアルいたしました。"
-			"スマートフォンからも見やすいデザインとし、お問い合わせフォームも入力しやすく改善しました。</p>"
-		),
-		"content_en": (
-			"<p>We have redesigned our website. It is now easier to read on smartphones, "
-			"and the contact form is simpler to fill in.</p>"
+			"<p>This is a sample article for the demo, not a real event.</p>"
+			"<p>News articles can be edited in Frappe Desk: Japanese and English text, image, "
+			"publish date and published status.</p>"
 		),
 	},
 ]
@@ -123,7 +87,7 @@ SAMPLE_INQUIRIES = [
 		"inquiry_type": "ESTIMATE",
 		"status": INQUIRY_STATUS_NEW,
 		"language": "ja",
-		"message": "在庫管理のシステム化を検討しています。概算のお見積もりをお願いできますでしょうか。",
+		"message": "ERPNextでの在庫管理・販売管理の導入を検討しています。概算のお見積もりをお願いできますでしょうか。",
 	},
 	{
 		"full_name": "佐藤 花子",
@@ -134,7 +98,7 @@ SAMPLE_INQUIRIES = [
 		"inquiry_type": "SERVICES",
 		"status": INQUIRY_STATUS_IN_PROGRESS,
 		"language": "ja",
-		"message": "大阪営業所での訪問相談は可能でしょうか。来月中の打ち合わせを希望します。",
+		"message": "SAP Business Oneと自社ECサイトの在庫連携について相談したいです。来月中にオンラインでの打ち合わせを希望します。",
 	},
 	{
 		"full_name": "John Miller",

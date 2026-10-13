@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Japanese Demo Website VERSION\n"
 "Report-Msgid-Bugs-To: tech@pixelcareconsulting.com\n"
-"POT-Creation-Date: 2026-10-13 07:54+0000\n"
-"PO-Revision-Date: 2026-10-13 07:54+0000\n"
+"POT-Creation-Date: 2026-10-13 08:13+0000\n"
+"PO-Revision-Date: 2026-10-13 08:13+0000\n"
 "Last-Translator: tech@pixelcareconsulting.com\n"
 "Language-Team: tech@pixelcareconsulting.com\n"
 "MIME-Version: 1.0\n"
@@ -18,66 +18,40 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: japanese_demo_website/www/index.html:22
-msgid "320+ companies"
-msgstr "320社以上"
+#: japanese_demo_website/www/about.html:16
+msgid "A new system only helps if the people using it every day find it easier than what they had before. That is why we start by understanding how the work is actually done, and stay with our clients after launch."
+msgstr "新しいシステムは、毎日使う方にとって以前より楽にならなければ意味がありません。だからこそ私たちは、まず実際の業務の進め方を理解することから始め、導入後もお客様に寄り添います。"
 
-#: japanese_demo_website/www/about.html:55
-msgid "48 (as of October 2026)"
-msgstr "48名（2026年10月現在）"
-
-#: japanese_demo_website/www/index.html:26
-msgid "48 people"
-msgstr "48名"
-
-#: japanese_demo_website/www/about.html:83
-msgid "5 minutes on foot from the Konan exit of Shinagawa Station"
-msgstr "JR品川駅 港南口より徒歩5分"
-
-#: japanese_demo_website/www/about.html:54
-msgid "50 million yen"
-msgstr "5,000万円"
-
-#: japanese_demo_website/templates/includes/footer.html:7
-#: japanese_demo_website/templates/site_base.html:40
-#: japanese_demo_website/www/about.html:56
-#: japanese_demo_website/www/about.html:82
-msgid "5F Minato Building, 9-9-9 Konan, Minato-ku, Tokyo"
-msgstr "東京都港区港南9-9-9 みなとビル5階"
-
-#: japanese_demo_website/www/about.html:88
-msgid "7 minutes on foot from Osaka Station"
-msgstr "JR大阪駅より徒歩7分"
-
-#: japanese_demo_website/www/about.html:87
-msgid "8F Umeda Business Tower, 1-2-3 Umeda, Kita-ku, Osaka"
-msgstr "大阪府大阪市北区梅田1-2-3 梅田ビジネスタワー8階"
-
-#: japanese_demo_website/www/about.html:21
-msgid "A new system only helps if the people using it every day find it easier than what they had before. That is why we start by watching how the work is actually done, and we stay with our clients after launch until the new way of working has settled in."
-msgstr "新しいシステムは、毎日使う方にとって以前より楽にならなければ意味がありません。だからこそ私たちは、まず実際の業務の進め方を拝見することから始め、導入後も新しい働き方が定着するまでお客様に寄り添います。"
+#: japanese_demo_website/constants.py:95
+#: japanese_demo_website/www/index.html:24
+msgid "AI and automation"
+msgstr "AI・業務自動化"
 
 #. Option for the 'Category' (Select) field in DocType 'News Article'
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
 msgid "ANNOUNCEMENT"
 msgstr "お知らせ"
 
+#: japanese_demo_website/www/about.html:13
+msgid "About Pixelcare"
+msgstr "ピクセルケアについて"
+
 #: japanese_demo_website/constants.py:15 japanese_demo_website/www/about.html:5
 #: japanese_demo_website/www/about.py:9
 msgid "About Us"
 msgstr "会社概要"
 
-#: japanese_demo_website/constants.py:45
+#: japanese_demo_website/constants.py:136
 msgid "About our services"
 msgstr "サービスについて"
 
-#: japanese_demo_website/www/index.html:67
-msgid "After launch we answer questions, handle changes and keep the system running, with a named contact for your company."
-msgstr "導入後は専任の担当者が、ご質問への対応や変更作業、システムの安定稼働を支えます。"
+#: japanese_demo_website/constants.py:53
+msgid "Accounting, sales, purchasing and inventory setup"
+msgstr "会計・販売・購買・在庫管理の設定"
 
-#: japanese_demo_website/www/services.html:51
-msgid "After launch, a named contact handles your questions and change requests. We monitor the system and report on its use every month."
-msgstr "導入後は専任の担当者が、ご質問や変更のご要望に対応します。システムの稼働状況を監視し、毎月の利用状況をご報告します。"
+#: japanese_demo_website/www/about.html:47
+msgid "Address"
+msgstr "所在地"
 
 #. Label of the privacy_consent (Check) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
@@ -88,120 +62,94 @@ msgstr "個人情報の取り扱いに同意"
 msgid "All"
 msgstr "すべて"
 
-#: japanese_demo_website/constants.py:49
+#: japanese_demo_website/constants.py:140
 msgid "Announcement"
 msgstr "お知らせ"
 
 #: japanese_demo_website/www/news/index.py:15
-msgid "Announcements, press releases and events from Minato Link."
-msgstr "みなとリンクからのお知らせ、プレスリリース、イベント情報です。"
+msgid "Announcements, press releases and events from Pixelcare Consulting."
+msgstr "ピクセルケア・コンサルティングからのお知らせ、プレスリリース、イベント情報です。"
 
-#: japanese_demo_website/www/about.html:52
-#: japanese_demo_website/www/about.html:67
-#: japanese_demo_website/www/index.html:18
-msgid "April 2012"
-msgstr "2012年4月"
-
-#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/templates/includes/footer.html:23
 #: japanese_demo_website/templates/site_base.html:40
 msgid "Auto"
 msgstr "自動"
 
-#: japanese_demo_website/www/news/article.html:19
+#: japanese_demo_website/constants.py:107
+msgid "Automatic reports and notifications"
+msgstr "レポート作成・通知の自動化"
+
+#: japanese_demo_website/www/news/article.html:20
 msgid "Back to news"
 msgstr "ニュース一覧へ戻る"
 
-#: japanese_demo_website/www/contact.html:102
+#: japanese_demo_website/www/contact.html:103
 msgid "Back to the home page"
 msgstr "トップページへ戻る"
 
-#: japanese_demo_website/www/about.html:57
+#: japanese_demo_website/www/about.html:56
 msgid "Business"
 msgstr "事業内容"
 
-#: japanese_demo_website/www/index.html:58
-#: japanese_demo_website/www/services.html:11
-msgid "Business process consulting"
-msgstr "業務改善コンサルティング"
-
-#: japanese_demo_website/www/services.py:10
-msgid "Business process consulting, system implementation and operations support, and how a project with us runs from first meeting to launch."
-msgstr "業務改善コンサルティング、システム導入支援、運用保守サポートのご紹介と、ご相談から稼働までの流れをご案内します。"
-
-#: japanese_demo_website/www/about.html:57
-#: japanese_demo_website/www/index.py:12
-msgid "Business process consulting, system implementation, operations support"
-msgstr "業務改善コンサルティング、システム導入支援、運用保守サポート"
+#: japanese_demo_website/www/about.html:54
+msgid "Business hours"
+msgstr "営業時間"
 
 #. Option for the 'Status' (Select) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
 msgid "CLOSED"
 msgstr "完了"
 
-#: japanese_demo_website/www/about.html:54
-msgid "Capital"
-msgstr "資本金"
-
 #. Label of the category (Select) field in DocType 'News Article'
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
 msgid "Category"
 msgstr "カテゴリ"
 
-#: japanese_demo_website/www/about.html:58
-msgid "Certifications"
-msgstr "認証"
-
-#: japanese_demo_website/www/index.html:21
-msgid "Client companies"
-msgstr "取引実績"
-
-#: japanese_demo_website/constants.py:44
+#: japanese_demo_website/constants.py:135
 msgid "Closed"
 msgstr "完了"
 
 #. Label of the company (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/api.py:21
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
-#: japanese_demo_website/www/contact.html:37
+#: japanese_demo_website/www/contact.html:38
 msgid "Company"
 msgstr "会社名"
 
-#: japanese_demo_website/www/about.html:11
-#: japanese_demo_website/www/about.html:49
+#: japanese_demo_website/www/about.html:43
 msgid "Company Profile"
 msgstr "会社情報"
 
-#: japanese_demo_website/www/about.html:51
+#: japanese_demo_website/www/about.html:45
 msgid "Company name"
 msgstr "商号"
 
 #: japanese_demo_website/www/about.py:10
-msgid "Company profile, message from our president, history and office locations of Minato Link."
-msgstr "みなとリンクの会社情報、代表挨拶、沿革、拠点のご案内です。"
+msgid "Company profile and office of Pixelcare Consulting Corporation."
+msgstr "ピクセルケア・コンサルティング（Pixelcare Consulting Corporation）の会社概要です。"
 
-#: japanese_demo_website/templates/includes/contact_band.html:5
-#: japanese_demo_website/www/index.html:73
-#: japanese_demo_website/www/services.html:90
-msgid "Consultations and quotes are free. We usually reply within two business days."
-msgstr "ご相談・お見積もりは無料です。通常2営業日以内にご返信いたします。"
+#: japanese_demo_website/templates/includes/header.html:7
+#: japanese_demo_website/templates/site_base.html:35
+msgid "Consulting"
+msgstr "コンサルティング"
 
 #. Label of the section_contact (Section Break) field in DocType 'Inquiry'
 #: japanese_demo_website/constants.py:18
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
-#: japanese_demo_website/www/contact.html:9
+#: japanese_demo_website/www/contact.html:10
 #: japanese_demo_website/www/contact.py:12
 msgid "Contact"
 msgstr "お問い合わせ"
 
 #: japanese_demo_website/www/contact.py:13
-msgid "Contact Minato Link about our services, quotes or partnerships."
+msgid "Contact Pixelcare Consulting about our services, quotes or partnerships."
 msgstr "サービス内容、お見積もり、協業についてのお問い合わせはこちらからどうぞ。"
 
-#: japanese_demo_website/www/contact.html:107
+#: japanese_demo_website/www/contact.html:108
 msgid "Contact by phone"
 msgstr "お電話でのお問い合わせ"
 
-#: japanese_demo_website/www/index.html:11
+#: japanese_demo_website/www/index.html:12
 msgid "Contact us"
 msgstr "お問い合わせ"
 
@@ -215,19 +163,47 @@ msgstr "本文（英語）"
 msgid "Content (Japanese)"
 msgstr "本文（日本語）"
 
-#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/constants.py:54
+msgid "Custom Frappe apps, forms, reports and print formats"
+msgstr "Frappeによる専用アプリ・入力画面・帳票・印刷フォーマットの開発"
+
+#: japanese_demo_website/constants.py:79
+msgid "Custom web and app development"
+msgstr "Web・アプリ開発"
+
+#: japanese_demo_website/constants.py:88
+msgid "Customer and supplier portals"
+msgstr "顧客・取引先向けポータルサイト"
+
+#: japanese_demo_website/templates/includes/footer.html:23
 #: japanese_demo_website/templates/site_base.html:40
 msgid "Dark"
 msgstr "ダーク"
 
-#: japanese_demo_website/www/services.html:36
-msgid "Data migration from spreadsheets and old systems"
+#: japanese_demo_website/constants.py:55
+msgid "Data migration from spreadsheets and older systems"
 msgstr "Excelや旧システムからのデータ移行"
 
-#: japanese_demo_website/templates/includes/footer.html:21
+#: japanese_demo_website/templates/includes/footer.html:22
 #: japanese_demo_website/templates/site_base.html:40
 msgid "Display mode"
 msgstr "表示モード"
+
+#: japanese_demo_website/www/index.html:21
+msgid "ERPNext / Frappe"
+msgstr "ERPNext / Frappe"
+
+#: japanese_demo_website/constants.py:42
+msgid "ERPNext and Frappe implementation"
+msgstr "ERPNext・Frappe 導入支援"
+
+#: japanese_demo_website/www/services.py:10
+msgid "ERPNext and Frappe implementation, SAP Business One integration, custom web development and AI automation, and how a project with us runs."
+msgstr "ERPNext・Frappeの導入支援、SAP Business Oneとのシステム連携、Web・アプリ開発、AIによる業務自動化のご紹介と、ご相談から稼働までの流れをご案内します。"
+
+#: japanese_demo_website/www/index.py:12
+msgid "ERPNext, SAP Business One and custom system development"
+msgstr "ERPNext導入・SAP Business One連携・システム開発"
 
 #. Option for the 'Inquiry Type' (Select) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
@@ -244,53 +220,43 @@ msgstr "イベント"
 msgid "Email"
 msgstr "メールアドレス"
 
-#: japanese_demo_website/api.py:22 japanese_demo_website/www/contact.html:55
+#: japanese_demo_website/api.py:22 japanese_demo_website/www/contact.html:56
 msgid "Email address"
 msgstr "メールアドレス"
-
-#: japanese_demo_website/www/about.html:55
-#: japanese_demo_website/www/index.html:25
-msgid "Employees"
-msgstr "従業員数"
 
 #. Label of the section_en (Section Break) field in DocType 'News Article'
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
 msgid "English"
 msgstr "英語"
 
-#: japanese_demo_website/www/about.html:37
+#: japanese_demo_website/www/about.html:31
 msgid "Estimates, schedules and risks are explained in terms everyone in the room can follow."
 msgstr "お見積もり、スケジュール、リスクは、関係者の誰もが理解できる言葉でご説明します。"
 
-#: japanese_demo_website/constants.py:51
+#: japanese_demo_website/constants.py:142
 msgid "Event"
 msgstr "イベント"
 
-#: japanese_demo_website/www/about.html:36
+#: japanese_demo_website/www/about.html:30
 msgid "Explain things plainly"
 msgstr "わかりやすく伝える"
 
-#: japanese_demo_website/www/contact.html:9
-msgid "Fill in the form below and we will reply by email, usually within two business days. For urgent matters, please call us."
-msgstr "下記フォームにご入力ください。通常2営業日以内にメールでご返信いたします。お急ぎの場合はお電話にてお問い合わせください。"
+#: japanese_demo_website/www/contact.html:10
+msgid "Fill in the form below and we will reply by email. For urgent matters, please call us."
+msgstr "下記フォームにご入力ください。担当者よりメールにてご連絡いたします。お急ぎの場合はお電話にてお問い合わせください。"
 
 #: japanese_demo_website/www/news/index.html:13
 msgid "Filter by category"
 msgstr "カテゴリで絞り込む"
 
-#: japanese_demo_website/templates/includes/footer.html:11
+#: japanese_demo_website/templates/includes/footer.html:12
 #: japanese_demo_website/templates/site_base.html:40
 msgid "Footer navigation"
 msgstr "フッターナビゲーション"
 
-#: japanese_demo_website/www/about.html:52
-#: japanese_demo_website/www/index.html:17
-msgid "Founded"
-msgstr "設立"
-
-#: japanese_demo_website/www/about.html:67
-msgid "Founded in Minato-ku, Tokyo"
-msgstr "東京都港区にて設立"
+#: japanese_demo_website/www/services.html:5
+msgid "Four services that cover a project from planning to day-to-day operation. You can use them together or on their own."
+msgstr "企画から日々の運用まで、4つのサービスでお客様を支援します。組み合わせても、単独でもご利用いただけます。"
 
 #. Label of the full_name (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
@@ -301,40 +267,23 @@ msgstr "氏名"
 msgid "Go to the first page"
 msgstr "最初のページへ"
 
-#: japanese_demo_website/www/about.html:56
-msgid "Head office"
-msgstr "本社所在地"
-
-#: japanese_demo_website/www/about.html:81
-msgid "Head office (Tokyo)"
-msgstr "本社（東京）"
-
-#: japanese_demo_website/www/services.html:71
+#: japanese_demo_website/www/services.html:37
 msgid "Hearing"
 msgstr "ヒアリング"
-
-#: japanese_demo_website/www/services.html:54
-msgid "Help desk by phone and email on business days"
-msgstr "営業日の電話・メールによるヘルプデスク"
-
-#: japanese_demo_website/www/about.html:12
-#: japanese_demo_website/www/about.html:65
-msgid "History"
-msgstr "沿革"
 
 #: japanese_demo_website/constants.py:14
 msgid "Home"
 msgstr "ホーム"
 
-#: japanese_demo_website/www/services.html:64
+#: japanese_demo_website/www/services.html:30
 msgid "How a project runs"
 msgstr "ご相談から稼働までの流れ"
 
-#: japanese_demo_website/www/contact.html:79
+#: japanese_demo_website/www/contact.html:80
 msgid "How we handle personal information"
 msgstr "個人情報の取り扱いについて"
 
-#: japanese_demo_website/www/contact.html:89
+#: japanese_demo_website/www/contact.html:90
 msgid "I agree to the handling of personal information described above."
 msgstr "上記の個人情報の取り扱いに同意します。"
 
@@ -343,25 +292,22 @@ msgstr "上記の個人情報の取り扱いに同意します。"
 msgid "IN_PROGRESS"
 msgstr "対応中"
 
-#: japanese_demo_website/www/about.html:58
-msgid "ISO/IEC 27001 (information security)"
-msgstr "ISO/IEC 27001（情報セキュリティマネジメントシステム）"
+#. Label of the image (Attach Image) field in DocType 'News Article'
+#: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
+msgid "Image"
+msgstr "画像"
 
-#: japanese_demo_website/www/services.html:79
+#: japanese_demo_website/www/services.html:45
 msgid "Implementation"
 msgstr "導入・構築"
 
-#: japanese_demo_website/www/services.html:19
-msgid "Improvement plan and budget"
-msgstr "改善計画とご予算のご提案"
-
-#: japanese_demo_website/constants.py:43
+#: japanese_demo_website/constants.py:134
 msgid "In Progress"
 msgstr "対応中"
 
 #. Name of a DocType
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
-#: japanese_demo_website/www/services.html:67
+#: japanese_demo_website/www/services.html:33
 msgid "Inquiry"
 msgstr "お問い合わせ"
 
@@ -370,67 +316,51 @@ msgstr "お問い合わせ"
 msgid "Inquiry Type"
 msgstr "お問い合わせ種別"
 
-#: japanese_demo_website/www/contact.html:28
+#: japanese_demo_website/www/contact.html:29
 msgid "Inquiry type"
 msgstr "お問い合わせ種別"
 
-#: japanese_demo_website/www/services.html:37
-msgid "Integration with accounting and e-commerce systems"
-msgstr "会計システム・ECサイトとの連携"
+#: japanese_demo_website/constants.py:89
+msgid "Internal tools and dashboards"
+msgstr "社内向け業務ツール・ダッシュボード"
+
+#: japanese_demo_website/www/about.html:54
+#: japanese_demo_website/www/contact.html:110
+msgid "Japan time 10:00 to 19:00"
+msgstr "日本時間 10:00〜19:00"
 
 #. Label of the section_ja (Section Break) field in DocType 'News Article'
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
 msgid "Japanese"
 msgstr "日本語"
 
-#: japanese_demo_website/www/about.html:70
-msgid "July 2026"
-msgstr "2026年7月"
-
-#: japanese_demo_website/www/about.html:68
-msgid "June 2016"
-msgstr "2016年6月"
-
-#: japanese_demo_website/www/about.html:23
-#: japanese_demo_website/www/about.html:53
-msgid "Kenji Tanaka, President and CEO"
-msgstr "代表取締役社長　田中 健司"
-
 #. Label of the language (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
-#: japanese_demo_website/templates/includes/header.html:19
+#: japanese_demo_website/templates/includes/header.html:22
 #: japanese_demo_website/templates/site_base.html:35
 msgid "Language"
 msgstr "言語"
 
-#: japanese_demo_website/www/services.html:83
+#: japanese_demo_website/www/services.html:49
 msgid "Launch and support"
 msgstr "稼働・サポート"
 
-#: japanese_demo_website/templates/includes/footer.html:22
+#: japanese_demo_website/templates/includes/footer.html:23
 #: japanese_demo_website/templates/site_base.html:40
 msgid "Light"
 msgstr "ライト"
-
-#: japanese_demo_website/www/services.html:18
-msgid "List of issues with an estimate of the time each one costs"
-msgstr "課題の一覧と、それぞれにかかっている工数の試算"
 
 #. Description of the 'URL Slug' (Data) field in DocType 'News Article'
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
 msgid "Lowercase letters, numbers and hyphens. The article is served at /news/&lt;slug&gt;."
 msgstr "半角英小文字・数字・ハイフンのみ使用できます。記事は /news/&lt;slug&gt; で公開されます。"
 
-#: japanese_demo_website/templates/includes/header.html:12
+#: japanese_demo_website/templates/includes/header.html:15
 #: japanese_demo_website/templates/site_base.html:35
 msgid "Main navigation"
 msgstr "メインナビゲーション"
 
-#: japanese_demo_website/www/about.html:69
-msgid "March 2020"
-msgstr "2020年3月"
-
-#: japanese_demo_website/templates/includes/header.html:9
+#: japanese_demo_website/templates/includes/header.html:12
 #: japanese_demo_website/templates/site_base.html:35
 msgid "Menu"
 msgstr "メニュー"
@@ -439,71 +369,36 @@ msgstr "メニュー"
 #. Label of the message (Long Text) field in DocType 'Inquiry'
 #: japanese_demo_website/api.py:24
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
-#: japanese_demo_website/www/contact.html:66
+#: japanese_demo_website/www/contact.html:67
 msgid "Message"
 msgstr "お問い合わせ内容"
-
-#: japanese_demo_website/www/about.html:9
-#: japanese_demo_website/www/about.html:19
-msgid "Message from the President"
-msgstr "代表挨拶"
 
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.py:17
 msgid "Message is required"
 msgstr "お問い合わせ内容は必須です"
-
-#: japanese_demo_website/templates/includes/header.html:5
-#: japanese_demo_website/templates/site_base.html:35
-msgid "Minato Link"
-msgstr "みなとリンク"
-
-#: japanese_demo_website/templates/includes/footer.html:4
-#: japanese_demo_website/templates/includes/footer.html:20
-#: japanese_demo_website/templates/site_base.html:6
-#: japanese_demo_website/templates/site_base.html:11
-#: japanese_demo_website/templates/site_base.html:40
-#: japanese_demo_website/www/about.html:51
-msgid "Minato Link Co., Ltd."
-msgstr "株式会社みなとリンク"
-
-#: japanese_demo_website/www/index.py:13
-msgid "Minato Link supports small and mid-sized companies in Japan with business process consulting, system implementation and ongoing operations support."
-msgstr "株式会社みなとリンクは、業務改善コンサルティング、システム導入支援、運用保守サポートを通じて、中小企業の皆さまの業務を支えています。"
-
-#: japanese_demo_website/www/services.html:56
-msgid "Monthly usage report and review meeting"
-msgstr "月次の利用状況レポートと定例会"
-
-#: japanese_demo_website/www/about.html:41
-msgid "Most of our clients have worked with us for more than five years."
-msgstr "多くのお客様と、5年以上のお付き合いをいただいています。"
-
-#: japanese_demo_website/www/about.html:69
-msgid "Moved the head office to Konan, Minato-ku"
-msgstr "本社を港区港南へ移転"
 
 #. Option for the 'Status' (Select) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
 msgid "NEW"
 msgstr "新規"
 
-#: japanese_demo_website/api.py:19 japanese_demo_website/www/contact.html:43
+#: japanese_demo_website/api.py:19 japanese_demo_website/www/contact.html:44
 msgid "Name"
 msgstr "お名前"
 
 #. Label of the name_kana (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/api.py:20
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
-#: japanese_demo_website/www/contact.html:48
+#: japanese_demo_website/www/contact.html:49
 msgid "Name (Kana)"
 msgstr "フリガナ"
 
-#: japanese_demo_website/constants.py:42
+#: japanese_demo_website/constants.py:133
 msgid "New"
 msgstr "新規"
 
 #: japanese_demo_website/constants.py:17
-#: japanese_demo_website/www/index.html:39
+#: japanese_demo_website/www/index.html:31
 #: japanese_demo_website/www/news/index.html:9
 #: japanese_demo_website/www/news/index.py:14
 msgid "News"
@@ -523,56 +418,28 @@ msgstr "次へ"
 msgid "OTHER"
 msgstr "その他"
 
-#: japanese_demo_website/www/about.html:70
-msgid "Obtained ISO/IEC 27001 certification"
-msgstr "ISO/IEC 27001 認証を取得"
-
-#: japanese_demo_website/www/about.html:71
-msgid "October 2026"
-msgstr "2026年10月"
-
-#: japanese_demo_website/www/about.html:13
-#: japanese_demo_website/www/about.html:78
-#: japanese_demo_website/www/index.html:29
-msgid "Offices"
-msgstr "拠点・アクセス"
-
-#: japanese_demo_website/www/about.html:7
-msgid "On this page"
-msgstr "このページの内容"
-
-#: japanese_demo_website/templates/includes/contact_band.html:9
-#: japanese_demo_website/www/index.html:73
-#: japanese_demo_website/www/services.html:90
+#: japanese_demo_website/templates/includes/contact_band.html:10
+#: japanese_demo_website/www/index.html:65
+#: japanese_demo_website/www/services.html:56
 msgid "Open the contact form"
 msgstr "お問い合わせフォームへ"
-
-#: japanese_demo_website/www/about.html:71
-msgid "Opened the Osaka office"
-msgstr "大阪営業所を開設"
-
-#: japanese_demo_website/www/index.html:66
-#: japanese_demo_website/www/services.html:48
-msgid "Operations support"
-msgstr "運用保守サポート"
 
 #. Description of the 'English' (Section Break) field in DocType 'News Article'
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
 msgid "Optional. English pages fall back to the Japanese text when empty."
 msgstr "任意項目です。未入力の場合、英語ページには日本語の内容が表示されます。"
 
-#: japanese_demo_website/www/about.html:86
-msgid "Osaka office"
-msgstr "大阪営業所"
-
-#: japanese_demo_website/constants.py:48
+#: japanese_demo_website/constants.py:139
 msgid "Other"
 msgstr "その他"
 
-#: japanese_demo_website/www/about.html:10
-#: japanese_demo_website/www/about.html:29
+#: japanese_demo_website/www/about.html:23
 msgid "Our Philosophy"
 msgstr "企業理念"
+
+#: japanese_demo_website/www/index.html:19
+msgid "Our services"
+msgstr "サービス一覧"
 
 #. Option for the 'Inquiry Type' (Select) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
@@ -592,24 +459,43 @@ msgstr "{1}ページ中 {0}ページ目"
 msgid "Pages"
 msgstr "ページ"
 
-#: japanese_demo_website/constants.py:47
+#: japanese_demo_website/constants.py:138
 msgid "Partnership"
 msgstr "協業・パートナー"
 
 #. Label of the phone (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
+#: japanese_demo_website/www/about.html:53
 msgid "Phone"
 msgstr "電話番号"
 
-#: japanese_demo_website/api.py:23 japanese_demo_website/www/contact.html:60
+#: japanese_demo_website/api.py:23 japanese_demo_website/www/contact.html:61
 msgid "Phone number"
 msgstr "電話番号"
 
-#: japanese_demo_website/api.py:91 japanese_demo_website/www/contact.html:21
+#: japanese_demo_website/templates/includes/header.html:6
+#: japanese_demo_website/templates/site_base.html:35
+msgid "Pixelcare"
+msgstr "ピクセルケア"
+
+#: japanese_demo_website/templates/site_base.html:6
+#: japanese_demo_website/templates/site_base.html:11
+msgid "Pixelcare Consulting"
+msgstr "ピクセルケア・コンサルティング"
+
+#: japanese_demo_website/www/about.html:14
+msgid "Pixelcare Consulting Corporation is a technology consulting company based in Pasig City, Philippines."
+msgstr "Pixelcare Consulting Corporation（ピクセルケア・コンサルティング）は、フィリピン・パシッグ市に拠点を置くITコンサルティング会社です。"
+
+#: japanese_demo_website/www/index.py:13
+msgid "Pixelcare Consulting implements ERPNext and Frappe, integrates SAP Business One, builds custom web applications and automates routine work with AI."
+msgstr "ピクセルケア・コンサルティングは、ERPNext・Frappeの導入、SAP Business Oneとのシステム連携、Webアプリケーション開発、AIによる業務自動化を通じて、お客様の業務を支えます。"
+
+#: japanese_demo_website/api.py:91 japanese_demo_website/www/contact.html:22
 msgid "Please agree to the privacy policy before sending."
 msgstr "送信の前に、個人情報の取り扱いへの同意をお願いいたします。"
 
-#: japanese_demo_website/www/contact.html:22
+#: japanese_demo_website/www/contact.html:23
 msgid "Please check the highlighted fields."
 msgstr "入力内容に不備があります。赤枠の項目をご確認ください。"
 
@@ -617,7 +503,7 @@ msgstr "入力内容に不備があります。赤枠の項目をご確認くだ
 msgid "Please choose an inquiry type."
 msgstr "お問い合わせ種別を選択してください。"
 
-#: japanese_demo_website/api.py:82 japanese_demo_website/www/contact.html:20
+#: japanese_demo_website/api.py:82 japanese_demo_website/www/contact.html:21
 msgid "Please enter a valid email address."
 msgstr "正しいメールアドレスを入力してください。"
 
@@ -629,18 +515,7 @@ msgstr "正しい電話番号を入力してください。"
 msgid "Please enter {0}."
 msgstr "{0}を入力してください。"
 
-#: japanese_demo_website/templates/includes/footer.html:6
-#: japanese_demo_website/templates/site_base.html:40
-#: japanese_demo_website/www/about.html:56
-#: japanese_demo_website/www/about.html:82
-msgid "Postal code 108-0075"
-msgstr "〒108-0075"
-
-#: japanese_demo_website/www/about.html:87
-msgid "Postal code 530-0001"
-msgstr "〒530-0001"
-
-#: japanese_demo_website/constants.py:50
+#: japanese_demo_website/constants.py:141
 msgid "Press Release"
 msgstr "プレスリリース"
 
@@ -648,7 +523,7 @@ msgstr "プレスリリース"
 msgid "Previous"
 msgstr "前へ"
 
-#: japanese_demo_website/www/services.html:75
+#: japanese_demo_website/www/services.html:41
 msgid "Proposal and quote"
 msgstr "ご提案・お見積もり"
 
@@ -662,15 +537,23 @@ msgstr "公開"
 msgid "Published On"
 msgstr "公開日"
 
-#: japanese_demo_website/www/contact.html:101
+#: japanese_demo_website/constants.py:90
+msgid "REST APIs and system integrations"
+msgstr "REST APIの開発とシステム間連携"
+
+#: japanese_demo_website/constants.py:106
+msgid "Reading and sorting documents and emails with AI"
+msgstr "AIによる書類・メールの読み取りと仕分け"
+
+#: japanese_demo_website/www/contact.html:102
 msgid "Reference number:"
 msgstr "受付番号："
 
-#: japanese_demo_website/www/about.html:53
-msgid "Representative"
-msgstr "代表者"
+#: japanese_demo_website/constants.py:74
+msgid "Reports and Crystal Reports layouts"
+msgstr "レポートおよびCrystal Reportsの帳票作成"
 
-#: japanese_demo_website/constants.py:46
+#: japanese_demo_website/constants.py:137
 msgid "Request a quote"
 msgstr "お見積もり依頼"
 
@@ -678,33 +561,45 @@ msgstr "お見積もり依頼"
 msgid "Required"
 msgstr "必須"
 
-#: japanese_demo_website/www/services.html:17
-msgid "Review of order, inventory, purchasing and billing processes"
-msgstr "受発注・在庫・購買・請求業務の現状調査"
+#: japanese_demo_website/www/index.html:22
+msgid "SAP Business One"
+msgstr "SAP Business One"
+
+#: japanese_demo_website/constants.py:61
+msgid "SAP Business One integration"
+msgstr "SAP Business One 連携"
 
 #. Option for the 'Inquiry Type' (Select) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
 msgid "SERVICES"
 msgstr "サービスについて"
 
-#: japanese_demo_website/www/index.html:12
+#: japanese_demo_website/constants.py:73
+msgid "Scheduled syncs of orders, items, customers and stock"
+msgstr "受注・品目・顧客・在庫データの定期同期"
+
+#: japanese_demo_website/www/index.html:13
 msgid "See our services"
 msgstr "事業内容を見る"
 
-#: japanese_demo_website/www/contact.html:94
+#: japanese_demo_website/www/contact.html:95
 msgid "Send inquiry"
 msgstr "送信する"
 
-#: japanese_demo_website/www/contact.html:18
+#: japanese_demo_website/www/contact.html:19
 msgid "Sending..."
 msgstr "送信中…"
 
-#: japanese_demo_website/www/index.html:54
+#: japanese_demo_website/constants.py:72
+msgid "Service Layer integrations with web, e-commerce and other systems"
+msgstr "Service LayerによるWeb・EC・他システムとの連携"
+
+#: japanese_demo_website/www/index.html:46
 msgid "Service details"
 msgstr "事業内容の詳細"
 
 #: japanese_demo_website/constants.py:16
-#: japanese_demo_website/www/index.html:53
+#: japanese_demo_website/www/index.html:45
 #: japanese_demo_website/www/services.html:5
 #: japanese_demo_website/www/services.py:9
 msgid "Services"
@@ -714,9 +609,10 @@ msgstr "事業内容"
 msgid "Show all news"
 msgstr "すべてのニュースを表示"
 
-#: japanese_demo_website/www/about.html:20
-msgid "Since our founding in 2012, we have worked with small and mid-sized companies whose daily work still depends on paper forms, phone calls and spreadsheets."
-msgstr "当社は2012年の創業以来、紙の帳票や電話、Excelに頼った日々の業務を抱える中小企業の皆さまとともに歩んでまいりました。"
+#. Description of the 'Image' (Attach Image) field in DocType 'News Article'
+#: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
+msgid "Shown on the news list and article page. A standard photo is used when empty. Landscape, at least 960px wide."
+msgstr "ニュース一覧と記事ページに表示されます。未設定の場合は標準の写真が表示されます。横長・幅960px以上の画像をご使用ください。"
 
 #. Description of the 'Language' (Data) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
@@ -727,28 +623,20 @@ msgstr "送信時に訪問者が使用していたサイトの言語"
 msgid "Skip to main content"
 msgstr "本文へスキップ"
 
-#: japanese_demo_website/www/services.html:55
-msgid "Small changes to screens, reports and forms"
-msgstr "画面・帳票・フォームの軽微な改修"
-
-#: japanese_demo_website/www/contact.html:25
+#: japanese_demo_website/www/contact.html:26
 msgid "Something went wrong and your inquiry was not sent. Please try again or call us."
 msgstr "エラーが発生したため、お問い合わせを送信できませんでした。お手数ですが、もう一度お試しいただくか、お電話にてご連絡ください。"
 
-#: japanese_demo_website/www/about.html:32
+#: japanese_demo_website/www/about.html:26
 msgid "Start from the work, not the tool"
 msgstr "道具ではなく、業務から考える"
-
-#: japanese_demo_website/www/about.html:68
-msgid "Started the operations support service"
-msgstr "運用保守サポートサービスを開始"
 
 #. Label of the status (Select) field in DocType 'Inquiry'
 #: japanese_demo_website/japanese_demo_website/doctype/inquiry/inquiry.json
 msgid "Status"
 msgstr "ステータス"
 
-#: japanese_demo_website/www/about.html:40
+#: japanese_demo_website/www/about.html:34
 msgid "Stay for the long term"
 msgstr "長くお付き合いする"
 
@@ -768,42 +656,31 @@ msgstr "概要（日本語）"
 msgid "System Manager"
 msgstr ""
 
-#: japanese_demo_website/www/services.html:35
-msgid "System configuration and custom screens"
-msgstr "システムの設定と専用画面の開発"
-
-#: japanese_demo_website/www/index.html:62
-#: japanese_demo_website/www/services.html:29
-msgid "System implementation"
-msgstr "システム導入支援"
-
-#: japanese_demo_website/www/index.html:8
+#: japanese_demo_website/www/index.html:9
 msgid "Systems that fit the way your business already works."
 msgstr "いまの業務に合った仕組みを、ともにつくる。"
 
-#: japanese_demo_website/templates/includes/contact_band.html:4
-#: japanese_demo_website/www/index.html:73
-#: japanese_demo_website/www/services.html:90
-msgid "Talk to us about your business"
-msgstr "業務のお悩み、まずはご相談ください"
+#: japanese_demo_website/templates/includes/contact_band.html:5
+#: japanese_demo_website/www/index.html:65
+#: japanese_demo_website/www/services.html:56
+msgid "Talk to us about your systems"
+msgstr "システムのお悩み、まずはご相談ください"
 
-#: japanese_demo_website/templates/includes/contact_band.html:8
-#: japanese_demo_website/templates/includes/footer.html:8
-#: japanese_demo_website/templates/site_base.html:40
-#: japanese_demo_website/www/index.html:73
-#: japanese_demo_website/www/services.html:90
-msgid "Tel: 03-1234-5678 (Weekdays 9:00 to 18:00)"
-msgstr "TEL：03-1234-5678（平日 9:00〜18:00）"
-
-#: japanese_demo_website/www/services.html:68
+#: japanese_demo_website/www/services.html:34
 msgid "Tell us about your situation through the form or by phone."
 msgstr "フォームまたはお電話で、現在の状況をお聞かせください。"
 
-#: japanese_demo_website/www/contact.html:99
+#: japanese_demo_website/templates/includes/contact_band.html:6
+#: japanese_demo_website/www/index.html:65
+#: japanese_demo_website/www/services.html:56
+msgid "Tell us what you use today and what you want to improve. We will reply by email."
+msgstr "現在ご利用のシステムや、改善したい点をお聞かせください。担当者よりメールにてご連絡いたします。"
+
+#: japanese_demo_website/www/contact.html:100
 msgid "Thank you for your inquiry."
 msgstr "お問い合わせありがとうございます。"
 
-#: japanese_demo_website/www/index.html:45
+#: japanese_demo_website/www/index.html:37
 #: japanese_demo_website/www/news/index.html:34
 msgid "There are no announcements at the moment."
 msgstr "現在、お知らせはありません。"
@@ -812,17 +689,13 @@ msgstr "現在、お知らせはありません。"
 msgid "There are no articles in this category yet."
 msgstr "このカテゴリの記事はまだありません。"
 
-#: japanese_demo_website/www/contact.html:19
+#: japanese_demo_website/www/contact.html:20
 msgid "This field is required."
 msgstr "この項目は必須です。"
 
 #: japanese_demo_website/www/news/index.html:24
 msgid "This page does not exist. The list may have become shorter."
 msgstr "このページは存在しません。記事数が変わった可能性があります。"
-
-#: japanese_demo_website/www/services.html:5
-msgid "Three services that cover a project from planning to day-to-day operation. You can use them together or on their own."
-msgstr "企画から日々の運用まで、3つのサービスでお客様を支援します。組み合わせても、単独でもご利用いただけます。"
 
 #. Label of the title_en (Data) field in DocType 'News Article'
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
@@ -834,17 +707,9 @@ msgstr "タイトル（英語）"
 msgid "Title (Japanese)"
 msgstr "タイトル（日本語）"
 
-#: japanese_demo_website/www/contact.html:83
+#: japanese_demo_website/www/contact.html:84
 msgid "To see, correct or delete your information, contact us by phone or through this form."
 msgstr "ご自身の情報の開示・訂正・削除をご希望の場合は、お電話または本フォームよりご連絡ください。"
-
-#: japanese_demo_website/www/index.html:30
-msgid "Tokyo, Osaka"
-msgstr "東京・大阪"
-
-#: japanese_demo_website/www/services.html:38
-msgid "Training sessions and Japanese user manuals"
-msgstr "操作研修と日本語マニュアルの作成"
 
 #. Label of the slug (Data) field in DocType 'News Article'
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
@@ -855,98 +720,138 @@ msgstr "URLスラッグ"
 msgid "URL Slug may only contain lowercase letters, numbers and single hyphens"
 msgstr "URLスラッグには半角英小文字・数字・ハイフン（連続不可）のみ使用できます"
 
-#: japanese_demo_website/www/contact.html:68
+#: japanese_demo_website/constants.py:29
+msgid "Unit 3006 One Corporate Centre Bldg., Julia Vargas Ave., Ortigas Center, San Antonio, Pasig City 1605, Philippines"
+msgstr "フィリピン共和国 パシッグ市 サンアントニオ オルティガスセンター ジュリア・バルガス通り ワン・コーポレート・センター・ビル 3006号室（郵便番号 1605）"
+
+#: japanese_demo_website/www/contact.html:69
 msgid "Up to {0} characters."
 msgstr "{0}文字以内でご入力ください。"
 
-#: japanese_demo_website/www/index.html:40
+#: japanese_demo_website/constants.py:56
+msgid "User training and operation manuals"
+msgstr "操作研修と操作マニュアルの作成"
+
+#: japanese_demo_website/www/index.html:32
 msgid "View all news"
 msgstr "ニュース一覧を見る"
 
-#: japanese_demo_website/www/services.html:80
+#: japanese_demo_website/constants.py:96
+msgid "We automate repetitive work such as data entry, document handling and reporting, and add AI where it saves real time."
+msgstr "データ入力や書類処理、レポート作成などの繰り返し作業を自動化し、効果が見込める箇所にAIを取り入れます。"
+
+#: japanese_demo_website/constants.py:80
+msgid "We build customer portals, internal tools and business applications with modern web technology."
+msgstr "顧客向けポータルや社内ツール、業務アプリケーションを、最新のWeb技術で開発します。"
+
+#: japanese_demo_website/constants.py:66
+msgid "We build integrations that keep SAP Business One in sync with the systems around it. Syncs are designed to be safe to re-run and every failure is logged, so nothing is silently lost."
+msgstr "SAP Business Oneと周辺システムのデータを同期させる連携を構築します。同期処理は再実行しても安全な設計とし、エラーはすべて記録するため、データが知らないうちに失われることはありません。"
+
+#: japanese_demo_website/www/services.html:46
 msgid "We build, test and train with your team."
 msgstr "構築・テストを行い、皆さまへの操作研修を実施します。"
 
-#: japanese_demo_website/www/about.html:33
+#: japanese_demo_website/www/about.html:27
 msgid "We choose and design systems around how your team operates, not the other way around."
 msgstr "システムに業務を合わせるのではなく、皆さまの働き方に合わせてシステムを選び、設計します。"
 
-#: japanese_demo_website/www/index.html:63
-msgid "We configure and connect business systems, migrate your existing data and train the people who will use them."
-msgstr "業務システムの設定・連携から既存データの移行、ご利用になる方への研修まで対応します。"
+#: japanese_demo_website/constants.py:62
+msgid "We connect SAP Business One to your website, e-commerce and other systems through the Service Layer, so data is entered once."
+msgstr "Service Layerを通じてSAP Business OneとWebサイト・EC・他システムをつなぎ、同じデータを何度も入力する手間をなくします。"
 
-#: japanese_demo_website/www/contact.html:24
+#: japanese_demo_website/www/contact.html:25
 msgid "We could not reach the server. Check your connection and try again."
 msgstr "サーバーに接続できませんでした。通信環境をご確認のうえ、もう一度お試しください。"
 
-#: japanese_demo_website/www/contact.html:82
+#: japanese_demo_website/www/contact.html:83
 msgid "We do not share it with third parties except where required by law."
 msgstr "法令に基づく場合を除き、第三者に提供することはありません。"
 
-#: japanese_demo_website/www/contact.html:100
-msgid "We have received your message and will reply by email within two business days."
-msgstr "内容を確認のうえ、2営業日以内にメールにてご連絡いたします。"
+#: japanese_demo_website/www/contact.html:101
+msgid "We have received your message and will reply by email."
+msgstr "内容を確認のうえ、担当者よりメールにてご連絡いたします。"
 
-#: japanese_demo_website/www/index.html:9
-msgid "We help small and mid-sized companies replace paper and spreadsheets in ordering, inventory and billing, from the first review of your current process to support after launch."
-msgstr "受発注・在庫・請求など、紙やExcelに頼った業務のシステム化を、現状の業務整理から導入後のサポートまで一貫してお手伝いします。"
+#: japanese_demo_website/www/about.html:15
+msgid "We help companies run their business on systems that fit: ERPNext and Frappe, SAP Business One integration, custom web applications and AI automation."
+msgstr "ERPNext・Frappe、SAP Business One連携、Webアプリケーション開発、AIによる業務自動化を通じて、お客様の業務に合ったシステムづくりをお手伝いしています。"
 
-#: japanese_demo_website/www/services.html:14
-msgid "We interview the people doing the work, follow documents through your company and write down where time is lost. You receive a short report with the changes we recommend, in order of impact."
-msgstr "現場の皆さまへのヒアリングや書類の流れの確認を通じて、時間がかかっている箇所を洗い出します。改善案は効果の大きい順にまとめ、簡潔な報告書としてお渡しします。"
+#: japanese_demo_website/www/index.html:10
+msgid "We implement ERPNext, connect SAP Business One with the rest of your tools, build custom web applications and automate routine work, from reviewing your current process to support after launch."
+msgstr "ERPNextの導入、SAP Business Oneと各種システムの連携、Webアプリケーションの開発、定型業務の自動化を、現状の業務整理から導入後のサポートまで一貫してお手伝いします。"
 
-#: japanese_demo_website/www/index.html:59
-msgid "We map how orders, stock and invoices move through your company today and agree with you on what to change first."
-msgstr "受注・在庫・請求が社内でどう流れているかを整理し、何から変えるべきかをお客様と一緒に決めます。"
+#: japanese_demo_website/www/about.html:35
+msgid "We keep supporting the system after launch so that it keeps fitting your business as it changes."
+msgstr "導入後もサポートを続け、事業の変化に合わせてシステムを育てていきます。"
 
-#: japanese_demo_website/www/services.html:32
-msgid "We set up the system to match the agreed process, connect it to your accounting software and existing tools, and move your data across. Staff training is part of every project."
-msgstr "合意した業務フローに合わせてシステムを設定し、会計ソフトや既存ツールと連携させ、データを移行します。すべてのプロジェクトに操作研修が含まれます。"
+#: japanese_demo_website/constants.py:100
+msgid "We look for the routine tasks that take your team the most time and automate them, using AI only where it is reliable enough for daily work."
+msgstr "皆さまの時間を最も多く使っている定型業務を見つけて自動化します。AIは、日常業務で安定して使える場面に限って活用します。"
 
-#: japanese_demo_website/www/services.html:84
+#: japanese_demo_website/www/services.html:38
+msgid "We meet online to understand your current process and systems."
+msgstr "オンラインで、現在の業務とシステムについて詳しく伺います。"
+
+#: japanese_demo_website/constants.py:43
+msgid "We set up ERPNext for your accounting, sales, purchasing and inventory, and build custom Frappe apps for the parts that are specific to your business."
+msgstr "会計・販売・購買・在庫管理にERPNextを導入し、貴社独自の業務にはFrappeで専用アプリを開発します。"
+
+#: japanese_demo_website/constants.py:47
+msgid "We start from how your team works today, configure ERPNext to match, move your existing data across and train the people who will use it. Where the standard features are not enough, we build custom Frappe apps instead of changing the core system."
+msgstr "現在の業務の進め方を理解したうえでERPNextを設定し、既存データを移行して、ご利用になる方への研修まで行います。標準機能で足りない部分は、基幹部分を改変せず、Frappeの専用アプリとして開発します。"
+
+#: japanese_demo_website/www/services.html:50
 msgid "We stay with you after go-live."
 msgstr "稼働後も継続してサポートします。"
 
-#: japanese_demo_website/www/contact.html:81
+#: japanese_demo_website/www/contact.html:82
 msgid "We use the information you enter only to reply to your inquiry and to provide the services you ask about."
 msgstr "ご入力いただいた情報は、お問い合わせへの回答およびご依頼いただいたサービスの提供にのみ使用します。"
 
-#: japanese_demo_website/www/services.html:72
-msgid "We visit or meet online to understand your current process."
-msgstr "ご訪問またはオンラインで、現在の業務を詳しく伺います。"
-
-#: japanese_demo_website/www/about.html:22
-msgid "We will keep earning our clients' trust one project at a time."
-msgstr "これからも一つひとつのプロジェクトを通じて、お客様の信頼にお応えしてまいります。"
+#: japanese_demo_website/www/index.html:23
+msgid "Web and app development"
+msgstr "Web・アプリ開発"
 
 #. Name of a role
 #: japanese_demo_website/japanese_demo_website/doctype/news_article/news_article.json
 msgid "Website Manager"
 msgstr "ウェブサイト管理者"
 
-#: japanese_demo_website/www/contact.html:109
-msgid "Weekdays 9:00 to 18:00, except national holidays and the year-end holidays."
-msgstr "受付時間：平日 9:00〜18:00（祝日・年末年始を除く）"
+#: japanese_demo_website/templates/includes/contact_band.html:9
+#: japanese_demo_website/templates/includes/footer.html:9
+#: japanese_demo_website/templates/site_base.html:40
+#: japanese_demo_website/www/about.html:54
+#: japanese_demo_website/www/contact.html:110
+#: japanese_demo_website/www/index.html:65
+#: japanese_demo_website/www/services.html:56
+msgid "Weekdays 9:00 to 18:00 (Philippine time)"
+msgstr "平日 9:00〜18:00（フィリピン時間）"
 
-#: japanese_demo_website/www/services.html:15
-#: japanese_demo_website/www/services.html:33
-#: japanese_demo_website/www/services.html:52
+#: japanese_demo_website/www/services.html:17
 msgid "What we cover"
 msgstr "主な対応内容"
+
+#: japanese_demo_website/constants.py:83
+msgid "When a packaged system does not fit, we build the application your business needs, connected to the systems you already use."
+msgstr "パッケージ製品が合わない場合は、既にお使いのシステムと連携する、貴社に必要なアプリケーションを開発します。"
 
 #: japanese_demo_website/www/about.html:5
 msgid "Who we are and how we work with our clients."
 msgstr "私たちの会社と、お客様との向き合い方についてご紹介します。"
 
-#: japanese_demo_website/www/contact.html:23
+#: japanese_demo_website/constants.py:105
+msgid "Workflow automation between your systems"
+msgstr "システム間の業務フロー自動化"
+
+#: japanese_demo_website/www/contact.html:24
 msgid "You have sent several inquiries in a short time. Please wait an hour and try again, or call us."
 msgstr "短時間に複数回送信されたため、受付を一時停止しています。1時間ほど経ってから再度お試しいただくか、お電話にてご連絡ください。"
 
-#: japanese_demo_website/www/services.html:76
-msgid "You receive a written plan, schedule and fixed quote."
-msgstr "計画書・スケジュール・お見積もりを書面でご提示します。"
+#: japanese_demo_website/www/services.html:42
+msgid "You receive a written proposal, schedule and quote."
+msgstr "提案書・スケジュール・お見積もりを書面でご提示します。"
 
-#: japanese_demo_website/www/contact.html:49
+#: japanese_demo_website/www/contact.html:50
 msgid "e.g. Yamada Taro"
 msgstr "例：ヤマダ タロウ"
 

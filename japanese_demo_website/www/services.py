@@ -8,8 +8,8 @@ def get_context(context):
 		context,
 		title=_("Services"),
 		description=_(
-			"Business process consulting, system implementation and operations support, "
-			"and how a project with us runs from first meeting to launch."
+			"ERPNext and Frappe implementation, SAP Business One integration, custom web development "
+			"and AI automation, and how a project with us runs."
 		),
 		active_route="/services",
 	)

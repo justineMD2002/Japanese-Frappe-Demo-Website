@@ -1,17 +1,18 @@
 {% extends "japanese_demo_website/templates/site_base.html" %}
+{% from "japanese_demo_website/templates/includes/macros.html" import news_meta %}
 
 {% block content %}
 <article class="article">
 	<header class="page-heading">
 		<div class="container container--narrow">
-			<p class="news-list__meta">
-				<time datetime="{{ article.published_on }}">{{ article.published_on | site_date }}</time>
-				<span class="tag tag--{{ article.category | lower }}">{{ article.category | status_label }}</span>
-			</p>
+			<p class="article__meta">{{ news_meta(article) }}</p>
 			<h1 class="page-heading__title">{{ article.title | e }}</h1>
 		</div>
 	</header>
 	<div class="section">
+		<figure class="container container--narrow article__figure">
+			<img src="{{ article.image }}" alt="" width="960" height="640" fetchpriority="high" decoding="async">
+		</figure>
 		<div class="container container--narrow prose">
 			{{ article.content }}
 		</div>

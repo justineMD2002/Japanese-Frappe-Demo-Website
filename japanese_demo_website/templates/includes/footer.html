@@ -1,11 +1,12 @@
+{%- set org = company() %}
 <footer class="site-footer">
 	<div class="container site-footer__inner">
 		<div class="site-footer__company">
-			<p class="site-footer__name">{{ _("Minato Link Co., Ltd.") }}</p>
+			<p class="site-footer__name">{{ org.legal_name }}</p>
 			<address>
-				{{ _("Postal code 108-0075") }}<br>
-				{{ _("5F Minato Building, 9-9-9 Konan, Minato-ku, Tokyo") }}<br>
-				{{ _("Tel: 03-1234-5678 (Weekdays 9:00 to 18:00)") }}
+				{{ org.address }}<br>
+				<a href="tel:{{ org.phone_tel }}">{{ org.phone_display }}</a>
+				<span class="site-footer__hours">{{ _("Weekdays 9:00 to 18:00 (Philippine time)") }}</span>
 			</address>
 		</div>
 		<nav aria-label="{{ _('Footer navigation') }}">
@@ -17,7 +18,7 @@
 		</nav>
 	</div>
 	<div class="container site-footer__bottom">
-		<p class="site-footer__copy">&copy; 2026 {{ _("Minato Link Co., Ltd.") }}</p>
+		<p class="site-footer__copy">&copy; 2026 {{ org.legal_name }}</p>
 		<div class="theme-switch" role="group" aria-label="{{ _('Display mode') }}">
 			{%- for value, label in (("light", _("Light")), ("dark", _("Dark")), ("auto", _("Auto"))) %}
 			<button class="theme-switch__option" type="button" data-theme-choice="{{ value }}" aria-pressed="false">{{ label }}</button>

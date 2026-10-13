@@ -10,7 +10,7 @@ def get_context(context):
 	set_page_meta(
 		context,
 		title=_("Contact"),
-		description=_("Contact Minato Link about our services, quotes or partnerships."),
+		description=_("Contact Pixelcare Consulting about our services, quotes or partnerships."),
 		active_route="/contact",
 	)
 	context.inquiry_types = INQUIRY_TYPES

@@ -9,10 +9,10 @@ def get_context(context):
 	set_page_meta(
 		context,
 		# home title leads with what the company does; the base template appends the company name
-		title=_("Business process consulting, system implementation, operations support"),
+		title=_("ERPNext, SAP Business One and custom system development"),
 		description=_(
-			"Minato Link supports small and mid-sized companies in Japan with business process "
-			"consulting, system implementation and ongoing operations support."
+			"Pixelcare Consulting implements ERPNext and Frappe, integrates SAP Business One, builds "
+			"custom web applications and automates routine work with AI."
 		),
 		active_route="/",
 	)
