@@ -277,6 +277,8 @@ website_route_rules = [
 
 # Japanese by default on this app's routes (see language.py)
 before_request = ["japanese_demo_website.language.set_site_language"]
+# ...and keep browsers from reusing a page cached in the other language
+after_request = ["japanese_demo_website.language.set_site_cache_headers"]
 
 jinja = {
 	"methods": [

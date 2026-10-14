@@ -1,7 +1,15 @@
+from types import SimpleNamespace
+
 import frappe
 from frappe.tests import UnitTestCase
+from werkzeug.datastructures import Headers
 
-from japanese_demo_website.language import is_site_path, resolve_site_language
+from japanese_demo_website.language import (
+	SITE_PAGE_CACHE_CONTROL,
+	is_site_path,
+	resolve_site_language,
+	set_site_cache_headers,
+)
 from japanese_demo_website.website import localized, site_date, status_label
 
 
@@ -23,6 +31,32 @@ class TestLanguageRule(UnitTestCase):
 			self.assertTrue(is_site_path(path), path)
 		for path in ("/app", "/login", "/newsletter", "/api/method/frappe.auth.get_logged_user"):
 			self.assertFalse(is_site_path(path), path)
+
+
+class TestSiteCacheHeaders(UnitTestCase):
+	def setUp(self):
+		self._headers = getattr(frappe.local, "response_headers", None)
+		frappe.local.response_headers = Headers({"Cache-Control": "private,max-age=300"})
+
+	def tearDown(self):
+		frappe.local.response_headers = self._headers
+
+	def run_hook(self, method: str, path: str) -> str:
+		set_site_cache_headers(None, SimpleNamespace(method=method, path=path))
+		return frappe.local.response_headers.get("Cache-Control")
+
+	def test_site_pages_are_revalidated(self):
+		for path in ("/", "/about", "/news/website-launch"):
+			self.assertEqual(self.run_hook("GET", path), SITE_PAGE_CACHE_CONTROL, path)
+
+	def test_other_responses_keep_frappe_defaults(self):
+		for method, path in (
+			("GET", "/login"),
+			("GET", "/assets/japanese_demo_website/images/hero-960.webp"),
+			("POST", "/contact"),
+			("GET", "/api/method/japanese_demo_website.api.submit_inquiry"),
+		):
+			self.assertEqual(self.run_hook(method, path), "private,max-age=300", path)
 
 
 class TestFormatters(UnitTestCase):
